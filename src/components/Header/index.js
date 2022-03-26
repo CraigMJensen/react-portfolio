@@ -1,9 +1,11 @@
 import React from 'react';
+import Nav from '../Nav';
 
 function Header() {
   return(
     <header>
-      Navigation links
+      <h1>Craig Jensen</h1>
+      <Nav />
     </header>
   )
 }
