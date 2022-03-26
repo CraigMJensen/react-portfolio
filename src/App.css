@@ -26,6 +26,30 @@
   height: 100vh;
 }
 
+.about-title {
+  margin: 0;
+  
+}
+
+.about-title > h2, h3 {
+  margin: 0 auto;
+  padding-top: 5rem;
+  color: white;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.navActive {
+  color: red;
+}
+
+.App-footer {
+  background-image: url('../src/images/technology-background.jpg');
+  color: white;
+  height: 4rem;
+}
+
 .list-links {
   width: 100%;
 }

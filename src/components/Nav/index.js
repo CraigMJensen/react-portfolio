@@ -1,8 +1,7 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 
 function Nav() {
-  const categories = [
+  const [categories] = useState([
     {
       name: 'About Me',
       description: 'A little information about me',
@@ -19,28 +18,26 @@ function Nav() {
       name: 'Resume',
       description: 'Professional Resume',
     },
-  ];
+  ]);
 
-  function categorySelected(name) {
-    console.log(`${name} clicked`);
-  }
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
-  
   return (
-    <div className='list-links'>
-      
-      <ul className='App-link'>
+    <div className="list-links">
+      <ul className="App-link">
         {categories.map((category) => (
           <li
-          key={category.name}
+            className={`${
+              currentCategory.name === category.name && 'navActive'
+            }`}
+            key={category.name}
           >
-            <span onClick={() => categorySelected(category.name)}>
+            <span onClick={() => setCurrentCategory(category)}>
               {category.name}
             </span>
           </li>
         ))}
       </ul>
-      
     </div>
   );
 }
