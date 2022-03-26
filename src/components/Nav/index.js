@@ -24,6 +24,8 @@ function Nav() {
   function categorySelected(name) {
     console.log(`${name} clicked`);
   }
+
+  
   return (
     <div className='list-links'>
       

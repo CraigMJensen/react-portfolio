@@ -21,6 +21,11 @@
   padding: 0;
 }
 
+.App-body {
+  background-color: #095E93;
+  height: 100vh;
+}
+
 .list-links {
   width: 100%;
 }
