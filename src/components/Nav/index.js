@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Nav() {
   const categories = [
     {
@@ -24,8 +25,9 @@ function Nav() {
     console.log(`${name} clicked`);
   }
   return (
-    <div>
-      <ul>
+    <div className='list-links'>
+      
+      <ul className='App-link'>
         {categories.map((category) => (
           <li
           key={category.name}
@@ -36,6 +38,7 @@ function Nav() {
           </li>
         ))}
       </ul>
+      
     </div>
   );
 }
