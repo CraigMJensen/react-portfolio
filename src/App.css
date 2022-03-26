@@ -23,21 +23,30 @@
 
 .App-body {
   background-color: #095E93;
-  height: 100vh;
-}
-
-.about-title {
-  margin: 0;
-  
+  height: 100%;
 }
 
 .about-title > h2, h3 {
   margin: 0 auto;
-  padding-top: 5rem;
+  padding: 2.5rem 0 2rem 0;
   color: white;
   width: 60%;
   display: flex;
   justify-content: center;
+}
+
+.about-image {
+  width: 40rem;
+}
+
+.image {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.about-title > h3 {
+  padding: 2.5rem 0;
 }
 
 .navActive {

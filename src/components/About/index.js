@@ -1,9 +1,14 @@
 import React from 'react';
+import image from '../../images/about.jpg';
 
 function About() {
   return (
     <div className="about-title">
       <h2>About</h2>
+        <div className='image'>
+          <img className='about-image' src={image} alt='Craig' />
+        </div>
+      
       <h3>
         Certificate in Full Stack Web Development from UT coding bootcamp with a
         strong background in surgical services and anesthesia. Coding skills in
