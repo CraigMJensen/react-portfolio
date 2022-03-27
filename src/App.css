@@ -37,6 +37,7 @@
 
 .about-image {
   width: 40rem;
+  border-radius: 40px;
   
 }
 
@@ -56,13 +57,26 @@
 }
 
 .active {
-  color: orangered;
+  color: goldenrod
 }
 
 .App-footer {
   background-image: url('../src/images/technology-background.jpg');
   color: white;
   height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  background-color: #095E93;
+  margin: 0 4rem;
+  padding: 1.125rem;
+}
+
+.icons:hover {
+  background-color: goldenrod;
 }
 
 .list-links {
