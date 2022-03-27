@@ -3,10 +3,10 @@ import image from '../../../images/about.jpg';
 
 function About() {
   return (
-    <div className="about-title">
+    <div className="about-page">
       <h2>About</h2>
-        <div className='image'>
-          <img className='about-image' src={image} alt='Craig' />
+        <div className='image-container'>
+          <img className='about-image' src={image} alt='Craig' width="25%"/>
         </div>
       
       <h3>
