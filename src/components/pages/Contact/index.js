@@ -31,7 +31,18 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    
+    // send(
+    //   'SERVICE ID',
+    //   'TEMPLATE ID',
+    //   toSend,
+    //   'User ID'
+    // )
+    //   .then((response) => {
+    //     console.log('SUCCESS!', response.status, response.text);
+    //   })
+    //   .catch((err) => {
+    //     console.log('FAILED...', err);
+    //   });
   }
 
   return (

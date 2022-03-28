@@ -1,7 +1,7 @@
 import React from 'react';
-import github from '../../images/github.svg';
-import linkedIn from '../../images/linkedIn.svg';
-import stackOverflow from '../../images/stackOverflow.svg';
+import github from '../../assets/images/github.svg';
+import linkedIn from '../../assets/images/linkedIn.svg';
+import stackOverflow from '../../assets/images/stackOverflow.svg';
 
 function Footer() {
   return (

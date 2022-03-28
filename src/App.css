@@ -12,7 +12,7 @@ body {
 }
 
 .App-header {
-  background-image: url('../src/images/technology-background.jpg');
+  background-image: url('../src/assets/images/technology-background.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@ body {
 }
 
 .App-footer {
-  background-image: url('../src/images/technology-background.jpg');
+  background-image: url('../src/assets/images/technology-background.jpg');
   color: white;
   height: 4rem;
   display: flex;
