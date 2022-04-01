@@ -1,27 +1,37 @@
 import React from 'react';
+import { projectData } from './projects';
 import githubSvg from '../../assets/images/github.svg';
 
-function Project({ title, description, image, github, deployed }) {
+function Project() {
+ console.log(projectData);
+  
+  
   return(
     <div>
-      <div className='card'>
+      {projectData.map((data, key) => (
+        <div className='card' key={key}>
       <div className='image-container'>
-        <a href={deployed}>
-          <img src={image} alt={description} />
+        <a href={data.deployed}>
+          <img src={data.image} alt={data.description} 
+           />
         </a>
       </div>
       <div className='content'>
-        <a href={github} title={description}>
+        <a href={data.github} title={data.description}>
           <img
             src={githubSvg}
             alt='GitHub Repo'
           />
-          <h3 className='card-title'>{title}</h3>
+          <h3 className='card-title'>{data.title}</h3>
         </a>
       </div>
     </div>
+      ))}
+      
     </div>
   )
+  
 }
+
 
 export default Project;
