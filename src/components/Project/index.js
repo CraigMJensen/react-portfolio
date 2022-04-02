@@ -3,16 +3,16 @@ import { projectData } from './projects';
 import githubSvg from '../../assets/images/github.svg';
 
 function Project() {
- console.log(projectData);
+ 
   
   
   return(
     <div>
-      {projectData.map((data, key) => (
-        <div className='card' key={key}>
+      {projectData.map((data, i) => (
+        <div className='card' key={i}>
       <div className='image-container'>
         <a href={data.deployed}>
-          <img src={data.image} alt={data.description} 
+          <img src={data.image} alt={data.description} width="600rem"
            />
         </a>
       </div>

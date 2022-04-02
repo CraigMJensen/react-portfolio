@@ -13,11 +13,9 @@ function Portfolio() {
         <p>portfolio</p>
       </div>
       <div className="project-container">
-        
-          <Project
-          
-          />
       
+          <Project />
+
       </div>
     </div>
   );
