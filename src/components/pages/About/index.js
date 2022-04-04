@@ -6,10 +6,10 @@ function About() {
     <div className="about-page wrapper">
       <h2 className='title'>About</h2>
         <div className='image-container'>
-          <img className='about-image' src={image} alt='Craig' width="25%"/>
+          <img className='about-image' src={image} alt='Craig' />
         </div>
       
-      <h3>
+      <p className='aboutMe'>
         Certificate in Full Stack Web Development from UT coding bootcamp with a
         strong background in surgical services and anesthesia. Coding skills in
         HTML, CSS, SASS, JavaScript, JQuery, Bootstrap, Handlebars, Node,
@@ -25,7 +25,7 @@ function About() {
         technician, I keep the anesthesia machines and devices in safe, working
         order. Keeping organized logs of all maintenance and safety checks that
         are performed and when they are due.{' '}
-      </h3>
+      </p>
     </div>
   );
 }

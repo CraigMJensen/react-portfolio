@@ -9,9 +9,9 @@ function Resume() {
           Download my <a href={resume} download="resume.pdf">Resume</a>
         </p>
       </div>
-      <div>
+      <div className='skills'>
         <p>Front-end Skills</p>
-        <ul>
+        <ul className='list'>
           <li>React</li>
           <li>HTML</li>
           <li>Handlebars</li>
@@ -23,7 +23,7 @@ function Resume() {
           <li>Responsive Design</li>
         </ul>
         <p>Back-end Skills</p>
-        <ul>
+        <ul className='list'>
           <li>Express</li>
           <li>MySql</li>
           <li>MongoDB</li>
