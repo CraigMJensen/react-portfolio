@@ -1,3 +1,11 @@
+:root {
+  --primary-clr: #095E93;
+  --secondary-clr: goldenrod;
+  --text-clr-primary: #ffffff;
+}
+
+/* Main */
+
 html, body {
   height: 100vh;
 }
@@ -7,9 +15,7 @@ body {
   flex-direction: column;
 }
 
-.App {
-  text-align: center;
-}
+/* Header and Nav Section */
 
 .App-header {
   background-image: url('../src/assets/images/technology-background.jpg');
@@ -18,11 +24,11 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-clr-primary);
 }
 
 .App-link {
-  color: white;
+  color: var(--text-clr-primary);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -30,25 +36,69 @@ body {
   padding: 0;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: var(--text-clr-primary);
+}
+
+.active {
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
+  padding: 1rem;
+}
+
+.list-links {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.nav-link:hover {
+  color: var(--secondary-clr);
+}
+
+.active:hover {
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+  
+}
+
+/* **Body Section** */
+
+.App {
+  text-align: center;
+}
+
+
+
 .App-body {
-  background-color: #095E93;
+  background-color: var(--primary-clr);
   flex: 1 0 auto;
 }
 
-.about-page > h2, h3 {
+.title, .about-page > h3 {
   margin: 0 auto;
   padding: 2rem 0 2rem 0;
-  color: white;
+  color: var(--text-clr-primary);
   width: 60%;
   display: flex;
   justify-content: center;
   
 }
 
-.about-image {
-  width: 25%;
-  border-radius: 40px;
-  
+.wrapper {
+  background-color: var(--primary-clr);
+  padding: 0;
+  text-align: center;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+.resumeDownload {
+  margin: 0;
+  padding: 2rem 0 2rem 0;
 }
 
 .image-container {
@@ -57,22 +107,48 @@ body {
   justify-content: center;
 }
 
+/* About Section */
+
 .about-title > h3 {
   padding: 2.5rem 0;
 }
 
-.nav-link {
-  text-decoration: none;
-  color: white
+.about-image {
+  width: 25%;
+  border-radius: 40px;
 }
 
-.active {
-  color: goldenrod
+/* Contact Section */
+
+#contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 1rem 0;
 }
+
+#contact-form > div {
+  padding: 1.125rem;
+}
+
+/* Portfolio Section*/
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+}
+
+/* Footer Section */
 
 .App-footer {
   background-image: url('../src/assets/images/technology-background.jpg');
-  color: white;
+  color: var(--text-clr-primary);
   height: 4rem;
   display: flex;
   justify-content: center;
@@ -82,17 +158,11 @@ body {
 }
 
 .icons {
-  background-color: #095E93;
-  margin: 0 4rem;
+  background-color: var(--primary-clr);
+  margin: 0 2rem;
   padding: 1.125rem;
 }
 
 .icons:hover {
-  background-color: goldenrod;
+  background-color: var(--secondary-clr);
 }
-
-.list-links {
-  width: 100%;
-}
-
-

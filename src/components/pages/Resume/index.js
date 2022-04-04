@@ -3,9 +3,9 @@ import resume from '../../../assets/Resume.pdf'
 
 function Resume() {
   return (
-    <div>
+    <div className='wrapper'>
       <div>
-        <p>
+        <p className='resumeDownload'>
           Download my <a href={resume} download="resume.pdf">Resume</a>
         </p>
       </div>

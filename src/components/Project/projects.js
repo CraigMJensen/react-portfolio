@@ -4,13 +4,13 @@ export const projectData = [
   {
     title: "Music & Movies",
     description: "Discover new music and new movies to entertain yourself!",
-    image: require("../../assets/images/1.jpg"),
+    image: require("../../assets/images/mmImg.jpg"),
     github: "https://github.com/CraigMJensen/MusicAndMovies",
     deployed: "https://jideogun.github.io/MusicAndMovies/"
   },
   {
     title: "TekSess",
-    description: "description",
+    description: "Review tech employers and see reviews from other users to help you navigate your job search!",
     image: require("../../assets/images/tekSess.png"),
     github: "https://github.com/CraigMJensen/Assess",
     deployed: "https://teksess.herokuapp.com/"

@@ -7,7 +7,7 @@ function Project() {
   
   
   return(
-    <div>
+    <div className='wrapper'>
       {projectData.map((data, i) => (
         <div className='card' key={i}>
       <div className='image-container'>
@@ -17,7 +17,7 @@ function Project() {
         </a>
       </div>
       <div className='content'>
-        <a href={data.github} title={data.description}>
+        <a href={data.github} title={data.title}>
           <img
             src={githubSvg}
             alt='GitHub Repo'

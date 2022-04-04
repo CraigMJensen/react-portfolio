@@ -46,25 +46,25 @@ function Contact() {
   }
 
   return (
-    <section>
-      <h1 data-testid='h1'>Contact me</h1>
+    <section className='wrapper'>
+      <h2 data-testid='h1' className='title'>Contact me</h2>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             name="name"
-            defaultValue={name}
             onBlur={handleChange}
+            onFocus={name}
           />
         </div>
         <div>
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email">Email:</label>
           <input
             type="email"
             name="email"
-            defaultValue={email}
             onBlur={handleChange}
+            onFocus={email}
           />
         </div>
         <div>
@@ -72,8 +72,8 @@ function Contact() {
           <textarea
             name="message"
             rows="5"
-            defaultValue={message}
             onBlur={handleChange}
+            onFocus={message}
           />
           {errorMessage && (
             <div>

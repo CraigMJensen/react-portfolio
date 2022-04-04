@@ -8,9 +8,9 @@ function Portfolio() {
   
   
   return (
-    <div className="portfolio-page">
-      <div className="title">
-        <p>portfolio</p>
+    <div className="portfolio-page wrapper">
+      <div>
+        <h2 className="title">Portfolio</h2>
       </div>
       <div className="project-container">
       
