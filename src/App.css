@@ -104,10 +104,11 @@ ul {
 
 .aboutMe {
   padding: 2.5rem 0;
+  font-size: 1.125rem;
 }
 
 .about-image {
-  width: 60%;
+  width: 35%;
   border-radius: 40px;
 }
 
@@ -118,47 +119,46 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  
 }
 
 .column {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 50%;
-
+  flex: 33%;
+  
 }
 
 .card {
   transition: all .35s;
-  
+  position: relative;
+  border-radius: 15px;
 }
 
-/* .card:hover {
+.card:hover {
   background-color: var(--light-dark-primary-clr);
   
-} */
-
-.card-title {
-  color: var(--secondary-clr);
-  background-color: var(--primary-clr);
-  
 }
-
-.content {
-  position: absolute;
-  display: none;
-  font-size: 2rem; 
-  
-}
-
 
 .project-image {
-  width: 90%;
+  width: 95%;
   padding: 1rem 0;
+  
 }
 
 .image-container:hover + .content {
   display: block;
+}
+
+.content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: none;
+  font-size: 1.5rem; 
+  
 }
 
 .content:hover {
@@ -166,14 +166,31 @@ ul {
   
 }
 
+.content a {
+  text-decoration: none;
+}
+
+.card-title {
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
+  border-radius: 15px;
+  padding: .5rem;
+}
+
+.card-title:hover {
+  font-size: 2rem;
+  transition: all .35s;
+}
+
 .gitIcon {
   background-color: var(--primary-clr);
   width: 3.5rem;
   transition: all .35s;
+  border-radius: 15px;
 }
 
 .gitIcon:hover {
-  width: 4rem;
+  width: 4.25rem;
 }
 
 /* Contact Section */
@@ -183,7 +200,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 60%;
 }
 
 #contact-form > div {
@@ -224,6 +241,13 @@ button:hover {
   color: var(--secondary-clr);
 }
 
+.error-text {
+  color: var(--secondary-clr);
+  background-color: var(--light-dark-primary-clr);
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
 
 /* Resume Section */
 
