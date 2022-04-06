@@ -4,8 +4,11 @@ import githubSvg from '../../assets/images/github.svg';
 
 function Project() {
   return (
-    <div className="wrapper">
+    <div>
+    
       {projectData.map((data, i) => (
+        <div className="row">
+        <div className="column">
         <div className="card" key={i}>
           <div className="image-container">
             <a href={data.deployed}>
@@ -19,8 +22,11 @@ function Project() {
             </a>
           </div>
         </div>
+        </div>
+      </div>
       ))}
-    </div>
+      
+      </div>
   );
 }
 
