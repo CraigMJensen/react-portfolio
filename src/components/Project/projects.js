@@ -4,7 +4,7 @@ export const projectData = [
   {
     title: "Music & Movies",
     description: "Discover new music and new movies to entertain yourself!",
-    image: require("../../assets/images/mmImg.jpg"),
+    image: require("../../assets/images/mmImg.png"),
     github: "https://github.com/CraigMJensen/MusicAndMovies",
     deployed: "https://jideogun.github.io/MusicAndMovies/"
   },
