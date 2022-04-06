@@ -4,7 +4,6 @@ import { send } from 'emailjs-com';
 
 function Contact() {
   const [errorMessage, setErrorMessage] = useState('');
-  
 
   const [toSend, setToSend] = useState({
     from_name: '',
@@ -13,8 +12,6 @@ function Contact() {
   });
 
   function handleChange(e) {
-    
-
     if (e.target.id === 'name') {
       if (e.target.value === '') {
         setErrorMessage('You must enter a name.');
@@ -51,25 +48,20 @@ function Contact() {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
-    
-      send('service_xb918as', 'template_dqn6h9r', toSend, '1A0DYHbHvH50Yv71j')
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
-        })
-        .catch((err) => {
-          console.log('FAILED...', err);
-        });
-    
+    send('service_xb918as', 'template_dqn6h9r', toSend, '1A0DYHbHvH50Yv71j')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      })
+      .catch((err) => {
+        console.log('FAILED...', err);
+      });
   }
 
-  
-    const [text, enableButton] = useState("");
-  
-    const handleTextChange = (event) => {
-      console.log(event.target);
-      enableButton(event.target.value);
-    };
+  const [text, enableButton] = useState('');
+
+  const handleTextChange = (e) => {
+    enableButton(e.target.value);
+  };
 
   return (
     <section className="wrapper">

@@ -203,15 +203,14 @@ ul {
   width: 60%;
 }
 
-#contact-form > div {
-  padding: .5rem;
+#contact-form div {
   width: 50%;
 }
 
 label {
   color: var(--text-clr-primary);
   font-size: 1.25rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 input {
