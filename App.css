@@ -1,0 +1,305 @@
+:root {
+  --primary-clr: rgba(9, 94, 147, 1);;
+  --light-primary-clr: rgba(9, 94, 147, .7);
+  --dark-primary-clr: rgba(5, 10, 39, 1);
+  --light-dark-primary-clr: rgba(5, 10, 39, .65);
+  --secondary-clr: goldenrod;
+  --text-clr-primary: #ffffff;
+}
+
+/* Main */
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header and Nav Section */
+
+.App-header {
+  background-image: url('../src/assets/images/technology-background.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-clr-primary);
+}
+
+.App-link {
+  color: var(--text-clr-primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-clr-primary);
+}
+
+.active {
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
+  padding: 1rem;
+}
+
+.list-links {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.nav-link:hover {
+  color: var(--secondary-clr);
+}
+
+
+
+/* **Body Section** */
+
+.App {
+  text-align: center;
+}
+
+
+
+.App-body {
+  background-color: var(--primary-clr);
+  flex: 1 0 auto;
+}
+
+.title, .aboutMe {
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+  color: var(--text-clr-primary);
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.wrapper {
+  background-color: var(--primary-clr);
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+ul {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+
+/* About Section */
+
+.aboutMe {
+  padding: 2.5rem 0;
+  font-size: 1.125rem;
+}
+
+.about-image {
+  width: 35%;
+  border-radius: 40px;
+}
+
+/* Portfolio Section*/
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 33%;
+  
+}
+
+.card {
+  transition: all .35s;
+  position: relative;
+  border-radius: 15px;
+}
+
+.card:hover {
+  background-color: var(--light-dark-primary-clr);
+  
+}
+
+.project-image {
+  width: 95%;
+  padding: 1rem 0;
+  
+}
+
+.image-container:hover + .content {
+  display: block;
+}
+
+.content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: none;
+  font-size: 1.5rem; 
+  
+}
+
+.content:hover {
+  display: block; 
+  
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.card-title {
+  color: var(--secondary-clr);
+  background-color: var(--primary-clr);
+  border-radius: 15px;
+  padding: .5rem;
+}
+
+.card-title:hover {
+  font-size: 2rem;
+  transition: all .35s;
+}
+
+.gitIcon {
+  background-color: var(--primary-clr);
+  width: 3.5rem;
+  transition: all .35s;
+  border-radius: 15px;
+}
+
+.gitIcon:hover {
+  width: 4.25rem;
+}
+
+/* Contact Section */
+
+#contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+#contact-form div {
+  width: 50%;
+}
+
+label {
+  color: var(--text-clr-primary);
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+input {
+  width: 50%;
+  height: 2rem;
+  border-radius: 15px;
+}
+
+textarea {
+  width: 100%;
+  height: 10rem;
+  border-radius: 15px;
+  margin-top: 1.5rem;
+}
+
+button {
+  width: 20%;
+  height: 3rem;
+  margin: 3rem 0 8rem 0;
+  border-radius: 15px;
+  background-color: var(--dark-primary-clr);
+  color: var(--text-clr-primary);
+  font-size: 1.5rem;
+}
+
+button:hover {
+  color: var(--secondary-clr);
+}
+
+.error-text {
+  color: var(--secondary-clr);
+  background-color: var(--light-dark-primary-clr);
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Resume Section */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-clr-primary);
+}
+
+.skills > p {
+  font-size: 1.5rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.resumeDownload {
+  font-size: 1.75rem;
+  margin: 0;
+  padding: 2rem 0 2rem 0;
+  color: var(--text-clr-primary);
+  
+}
+
+.resumeDownload > a {
+  text-decoration: none;
+  color: var(--text-clr-primary);
+}
+
+.resumeDownload > a:hover {
+  color: var(--secondary-clr);
+}
+
+/* Footer Section */
+
+.App-footer {
+  background-image: url('../src/assets/images/technology-background.jpg');
+  color: var(--text-clr-primary);
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+}
+
+.icons {
+  background-color: var(--primary-clr);
+  margin: 0 2rem;
+  padding: 1.125rem;
+}
+
+.icons:hover {
+  background-color: var(--secondary-clr);
+}
