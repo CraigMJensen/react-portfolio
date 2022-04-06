@@ -92,6 +92,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 
 ul {
@@ -112,13 +113,21 @@ ul {
 
 /* Portfolio Section*/
 
-.card {
-  margin: 0 auto;
+.row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  width: 60%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.card {
   transition: all .35s;
 }
 
@@ -141,12 +150,13 @@ ul {
 
 .image-container {
   position: relative;
-  width: 100%;
+  
+  
   
 }
 
 .project-image {
-  width: 95%;
+  width: 100%;
   padding: 1rem 0;
 }
 

@@ -6,7 +6,7 @@ function Resume() {
     <div className='wrapper'>
       <div>
         <p className='resumeDownload'>
-          Download my <a href={resume} download="resume.pdf">Resume</a>
+          <a href={resume} download="resume.pdf">Click Here to download my resume!</a>
         </p>
       </div>
       <div className='skills'>
