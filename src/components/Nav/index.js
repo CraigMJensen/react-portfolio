@@ -3,7 +3,7 @@ import React from 'react';
 function Nav({ currentPage, handlePageChange }) {
   return (
     <header className="App-header">
-      <h1>Craig Jensen</h1>
+      <h1 className='h1'>Craig Jensen</h1>
       <div className="list-links">
         <ul className="App-link">
           <li className="nav-item">

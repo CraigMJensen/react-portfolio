@@ -24,8 +24,14 @@ body {
 .App-header {
   background-image: url('../../assets/images/technology-background.jpg');
   flex: none;
+  height: 100%;
   font-size: calc(10px + 2vmin);
   color: var(--text-clr-primary);
+}
+
+.h1 {
+  margin-top: 0;
+  padding-top: 2rem;
 }
 
 .App-link {
@@ -86,7 +92,7 @@ body {
   background-color: var(--primary-clr);
   padding: 0;
   text-align: center;
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: auto;
 }
 
