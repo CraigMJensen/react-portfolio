@@ -1,49 +1,75 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../../utils/helpers';
+import { send } from 'emailjs-com';
 
 function Contact() {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const { name, email, message } = formState;
   const [errorMessage, setErrorMessage] = useState('');
+  
+
+  const [toSend, setToSend] = useState({
+    from_name: '',
+    message: '',
+    reply_to: '',
+  });
 
   function handleChange(e) {
-    if (e.target.name === 'email') {
+    
+
+    if (e.target.id === 'name') {
+      if (e.target.value === '') {
+        setErrorMessage('You must enter a name.');
+      } else {
+        setErrorMessage('');
+      }
+    }
+
+    if (e.target.id === 'email') {
       const isValid = validateEmail(e.target.value);
       // isValid conditional statement
       if (!isValid) {
         setErrorMessage('Your email is invalid.');
       } else {
         if (!e.target.value.length) {
-          setErrorMessage(`${e.target.name} is required.`);
+          setErrorMessage(`${e.target.id} is required.`);
         } else {
           setErrorMessage('');
         }
       }
     }
+
+    if (e.target.id === 'message') {
+      if (e.target.value === '') {
+        setErrorMessage('You must enter a message.');
+      } else {
+        setErrorMessage('');
+      }
+    }
+
     if (!errorMessage) {
-      setFormState({ ...formState, [e.target.value]: e.target.value });
+      setToSend({ ...toSend, [e.target.name]: e.target.value });
     }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    // send(
-    //   'SERVICE ID',
-    //   'TEMPLATE ID',
-    //   toSend,
-    //   'User ID'
-    // )
-    //   .then((response) => {
-    //     console.log('SUCCESS!', response.status, response.text);
-    //   })
-    //   .catch((err) => {
-    //     console.log('FAILED...', err);
-    //   });
+    
+      send('service_xb918as', 'template_dqn6h9r', toSend, '1A0DYHbHvH50Yv71j')
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+        });
+    
   }
+
+  
+    const [text, enableButton] = useState("");
+  
+    const handleTextChange = (event) => {
+      console.log(event.target);
+      enableButton(event.target.value);
+    };
 
   return (
     <section className="wrapper">
@@ -51,42 +77,39 @@ function Contact() {
         Contact me
       </h2>
       <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name"></label>
-          <input
-            placeholder="Name:"
-            type="text"
-            name="name"
-            onBlur={handleChange}
-            onFocus={name}
-          />
-        </div>
-        <div>
-          <label htmlFor="email"></label>
-          <input
-            placeholder="Email:"
-            type="email"
-            name="email"
-            onBlur={handleChange}
-            onFocus={email}
-          />
-        </div>
-        <div>
-          <label htmlFor="message"></label>
-          <textarea
-            placeholder="Enter message here..."
-            name="message"
-            rows="5"
-            onBlur={handleChange}
-            onFocus={message}
-          />
-          {errorMessage && (
-            <div>
-              <p className="error-text">{errorMessage}</p>
-            </div>
-          )}
-        </div>
-        <button type="submit" data-testid="button">
+        <label htmlFor="name">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="from_name"
+          placeholder="Your name"
+          onBlur={handleChange}
+          onChange={handleTextChange}
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="reply_to"
+          placeholder="Your email"
+          onBlur={handleChange}
+          onChange={handleTextChange}
+        />
+        <label htmlFor="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your message here..."
+          onBlur={handleChange}
+          onChange={handleTextChange}
+        />
+        {errorMessage && (
+          <div>
+            <p className="error-text">{errorMessage}</p>
+          </div>
+        )}
+
+        <button type="submit" data-testid="button" disabled={!text}>
           Submit
         </button>
       </form>
