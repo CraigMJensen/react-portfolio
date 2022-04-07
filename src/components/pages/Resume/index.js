@@ -10,6 +10,7 @@ function Resume() {
         </p>
       </div>
       <div className='skills'>
+        <div className='frontEndSkills'>
         <p>Front-end Skills</p>
         <ul className='list'>
           <li>React</li>
@@ -22,6 +23,8 @@ function Resume() {
           <li>JQuery</li>
           <li>Responsive Design</li>
         </ul>
+        </div>
+        <div className='backEndSkills'>
         <p>Back-end Skills</p>
         <ul className='list'>
           <li>Express</li>
@@ -32,6 +35,7 @@ function Resume() {
           <li>API</li>
           <li>GraphQL</li>
         </ul>
+        </div>
       </div>
     </div>
   );

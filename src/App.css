@@ -108,8 +108,24 @@ ul {
 }
 
 .about-image {
-  width: 35%;
+  width: 80%;
   border-radius: 40px;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMe {
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0 1rem;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-image {
+    width: 40%;
+  }
 }
 
 /* Portfolio Section*/
@@ -137,7 +153,7 @@ ul {
 }
 
 .card:hover {
-  background-color: var(--light-dark-primary-clr);
+  background-image: url('../src/assets/images/technology-background.jpg');
   
 }
 
@@ -151,30 +167,20 @@ ul {
   display: block;
 }
 
-.content {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  display: none;
-  font-size: 1.5rem; 
-  
-}
-
 .content:hover {
   display: block; 
   
 }
 
-.content a {
-  text-decoration: none;
-}
-
 .card-title {
   color: var(--secondary-clr);
-  background-color: var(--primary-clr);
+  background-image: url('../src/assets/images/technology-background.jpg');
   border-radius: 15px;
   padding: .5rem;
+}
+
+.content a {
+  text-decoration: none;
 }
 
 .card-title:hover {
@@ -193,6 +199,50 @@ ul {
   width: 4.25rem;
 }
 
+@media screen and (min-width: 768px) {
+  .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    font-size: 1.5rem; 
+    
+  }
+  }
+
+@media only screen and (max-width: 768px) {
+  .column {
+    flex: 100%;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gitIcon {
+    width: 2rem;
+  } 
+}
+
+@media screen and (min-width: 768px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .column {
+    flex: 33%;
+  }
+}
+
 /* Contact Section */
 
 #contact-form {
@@ -201,6 +251,9 @@ ul {
   align-items: center;
   flex-direction: column;
   width: 60%;
+  padding: 0 2rem;
+  background-image: url('../src/assets/images/technology-background.jpg');
+  border-radius: 15px;
 }
 
 #contact-form > div {
@@ -210,7 +263,7 @@ ul {
 label {
   color: var(--text-clr-primary);
   font-size: 1.25rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 input {
@@ -248,20 +301,39 @@ button:hover {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  button {
+    width: 50%;
+  }
+  
+  input {
+    width: 80%;
+  }
+}
+
 /* Resume Section */
 
 .skills {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  padding: 1rem;
   color: var(--text-clr-primary);
 }
 
-.skills > p {
+.skills p {
   font-size: 1.5rem;
+}
+
+.frontEndSkills, .backEndSkills {
+  padding: 1rem;
+  background-image: url('../src/assets/images/technology-background.jpg');
+  border-radius: 15px;
 }
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .resumeDownload {
@@ -279,6 +351,24 @@ button:hover {
 
 .resumeDownload > a:hover {
   color: var(--secondary-clr);
+}
+
+@media screen and (max-width: 1200px) {
+  .skills {
+    width: 50%
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .skills {
+    width: 50%;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+  }
 }
 
 /* Footer Section */
