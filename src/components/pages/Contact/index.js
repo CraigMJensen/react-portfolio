@@ -42,12 +42,13 @@ function Contact() {
       }
     }
 
-    if (!errorMessage) {
+    
       setToSend({ ...toSend, [e.target.name]: e.target.value });
-    }
+    
   }
 
   function handleSubmit(e) {
+    e.preventDefault();
     send('service_xb918as', 'template_dqn6h9r', toSend, '1A0DYHbHvH50Yv71j')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
@@ -55,6 +56,7 @@ function Contact() {
       .catch((err) => {
         console.log('FAILED...', err);
       });
+      
   }
 
   const [text, enableButton] = useState('');
@@ -76,6 +78,7 @@ function Contact() {
           name="from_name"
           placeholder="Your name"
           onBlur={handleChange}
+          
         />
         <label htmlFor="email">Email</label>
         <input
@@ -84,6 +87,7 @@ function Contact() {
           name="reply_to"
           placeholder="Your email"
           onBlur={handleChange}
+          
         />
         <label htmlFor="message">Message</label>
         <textarea
