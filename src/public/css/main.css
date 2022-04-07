@@ -1,5 +1,5 @@
 :root {
-  --primary-clr: rgba(9, 94, 147, 1);;
+  --primary-clr: rgba(9, 94, 147, 1);
   --light-primary-clr: rgba(9, 94, 147, .7);
   --dark-primary-clr: rgba(5, 10, 39, 1);
   --light-dark-primary-clr: rgba(5, 10, 39, .65);
@@ -8,31 +8,43 @@
 }
 
 /* Main */
-
 html, body {
   height: 100vh;
   margin: 0 auto;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /* Header and Nav Section */
-
 .App-header {
-  background-image: url('../../assets/images/technology-background.jpg');
-  flex: none;
+  background-image: url("../../assets/images/technology-background.jpg");
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
   font-size: calc(10px + 2vmin);
   color: var(--text-clr-primary);
 }
 
 .App-link {
   color: var(--text-clr-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
   padding: 0;
 }
@@ -57,19 +69,16 @@ body {
   color: var(--secondary-clr);
 }
 
-
-
 /* **Body Section** */
-
 .App {
   text-align: center;
 }
 
-
-
 .App-body {
   background-color: var(--primary-clr);
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .title, .aboutMe {
@@ -77,9 +86,12 @@ body {
   padding: 2rem 0 2rem 0;
   color: var(--text-clr-primary);
   width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .wrapper {
@@ -87,7 +99,9 @@ body {
   padding: 0;
   text-align: center;
   overflow-y: scroll;
-  flex: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 
 ul {
@@ -96,7 +110,6 @@ ul {
 }
 
 /* About Section */
-
 .aboutMe {
   padding: 2.5rem 0;
   font-size: 1.125rem;
@@ -105,7 +118,6 @@ ul {
 .about-image {
   width: 80%;
   border-radius: 40px;
-  
 }
 
 @media screen and (max-width: 768px) {
@@ -124,38 +136,48 @@ ul {
 }
 
 /* Portfolio Section*/
-
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
-  
 }
 
 .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 33%;
-  
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 33%;
+      -ms-flex: 33%;
+          flex: 33%;
 }
 
 .card {
+  -webkit-transition: all .35s;
   transition: all .35s;
   position: relative;
   border-radius: 15px;
 }
 
 .card:hover {
-  background-image: url('../../assets/images/technology-background.jpg');
-  
+  background-image: url("../../assets/images/technology-background.jpg");
 }
 
 .project-image {
   width: 95%;
   padding: 1rem 0;
-  
 }
 
 .image-container:hover + .content {
@@ -163,13 +185,12 @@ ul {
 }
 
 .content:hover {
-  display: block; 
-  
+  display: block;
 }
 
 .card-title {
   color: var(--secondary-clr);
-  background-image: url('../../assets/images/technology-background.jpg');
+  background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
   padding: .5rem;
 }
@@ -180,12 +201,14 @@ ul {
 
 .card-title:hover {
   font-size: 2rem;
+  -webkit-transition: all .35s;
   transition: all .35s;
 }
 
 .gitIcon {
   background-color: var(--primary-clr);
   width: 3.5rem;
+  -webkit-transition: all .35s;
   transition: all .35s;
   border-radius: 15px;
 }
@@ -198,57 +221,76 @@ ul {
   .content {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     position: absolute;
     display: none;
-    font-size: 1.5rem; 
-    
+    font-size: 1.5rem;
   }
-  }
+}
 
 @media only screen and (max-width: 768px) {
   .column {
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
   }
-
   .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
-
   .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .gitIcon {
     width: 2rem;
-  } 
+  }
 }
 
 @media screen and (min-width: 768px) {
   .column {
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .column {
-    flex: 33%;
+    -webkit-box-flex: 33%;
+        -ms-flex: 33%;
+            flex: 33%;
   }
 }
 
 /* Contact Section */
-
 #contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 auto;
   width: 60%;
   padding: 0 2rem;
-  background-image: url('../../assets/images/technology-background.jpg');
+  background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
 }
 
@@ -301,17 +343,19 @@ button:hover {
   button {
     width: 50%;
   }
-  
   input {
     width: 80%;
   }
 }
 
 /* Resume Section */
-
 .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
   width: 30%;
   padding: 1rem;
@@ -325,7 +369,7 @@ button:hover {
 
 .frontEndSkills, .backEndSkills {
   padding: 1rem;
-  background-image: url('../../assets/images/technology-background.jpg');
+  background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
 }
 
@@ -339,7 +383,6 @@ button:hover {
   margin: 0;
   padding: 2rem 0 2rem 0;
   color: var(--text-clr-primary);
-  
 }
 
 .resumeDownload > a {
@@ -353,9 +396,8 @@ button:hover {
 
 @media screen and (max-width: 1200px) {
   .skills {
-    width: 50%
+    width: 50%;
   }
-
   .wrapper {
     height: 100vh;
   }
@@ -365,26 +407,33 @@ button:hover {
   .skills {
     width: 50%;
   }
-
 }
 
-@media  screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .skills {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 /* Footer Section */
-
 .App-footer {
-  background-image: url('../../assets/images/technology-background.jpg');
+  background-image: url("../../assets/images/technology-background.jpg");
   color: var(--text-clr-primary);
   height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .icons {
@@ -396,3 +445,4 @@ button:hover {
 .icons:hover {
   background-color: var(--secondary-clr);
 }
+/*# sourceMappingURL=main.css.map */

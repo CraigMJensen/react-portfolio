@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../src/public/css/main.css';
 import PortfolioContainer from './components/PortfolioContainer';
 
 function App() {
