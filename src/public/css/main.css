@@ -1,29 +1,14 @@
-:root {
-  --primary-clr: rgba(9, 94, 147, 1);
-  --light-primary-clr: rgba(9, 94, 147, .7);
-  --dark-primary-clr: rgba(5, 10, 39, 1);
-  --light-dark-primary-clr: rgba(5, 10, 39, .65);
-  --secondary-clr: goldenrod;
-  --text-clr-primary: #ffffff;
-}
-
-/* Main */
-html, body {
-  height: 100vh;
-  margin: 0 auto;
-}
-
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header and Nav Section */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
 .App-header {
   background-image: url("../../assets/images/technology-background.jpg");
   -webkit-box-flex: 0;
@@ -31,7 +16,7 @@ body {
           flex: none;
   height: 100%;
   font-size: calc(10px + 2vmin);
-  color: var(--text-clr-primary);
+  color: #ffffff;
 }
 
 .h1 {
@@ -40,7 +25,7 @@ body {
 }
 
 .App-link {
-  color: var(--text-clr-primary);
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,12 +42,13 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-clr-primary);
+  color: #ffffff;
+  border-radius: 15px 15px 0 0;
 }
 
 .active {
-  color: var(--secondary-clr);
-  background-color: var(--primary-clr);
+  color: goldenrod;
+  background-color: #095e93;
   padding: 1rem;
 }
 
@@ -72,25 +58,14 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--secondary-clr);
+  color: goldenrod;
 }
 
-/* **Body Section** */
-.App {
-  text-align: center;
-}
-
-.App-body {
-  background-color: var(--primary-clr);
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-}
-
-.title, .aboutMe {
+.title,
+.aboutMe {
   margin: 0 auto;
   padding: 2rem 0 2rem 0;
-  color: var(--text-clr-primary);
+  color: #ffffff;
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,22 +75,6 @@ body {
           justify-content: center;
 }
 
-.wrapper {
-  background-color: var(--primary-clr);
-  padding: 0;
-  text-align: center;
-  overflow-y: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
-}
-
-ul {
-  margin-bottom: 0;
-  padding-bottom: 1rem;
-}
-
-/* About Section */
 .aboutMe {
   padding: 2.5rem 0;
   font-size: 1.125rem;
@@ -141,7 +100,6 @@ ul {
   }
 }
 
-/* Portfolio Section*/
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,8 +129,8 @@ ul {
 }
 
 .card {
-  -webkit-transition: all .35s;
-  transition: all .35s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
   position: relative;
   border-radius: 15px;
 }
@@ -195,10 +153,10 @@ ul {
 }
 
 .card-title {
-  color: var(--secondary-clr);
+  color: goldenrod;
   background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .content a {
@@ -207,15 +165,15 @@ ul {
 
 .card-title:hover {
   font-size: 2rem;
-  -webkit-transition: all .35s;
-  transition: all .35s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 .gitIcon {
-  background-color: var(--primary-clr);
+  background-color: #095e93;
   width: 3.5rem;
-  -webkit-transition: all .35s;
-  transition: all .35s;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
   border-radius: 15px;
 }
 
@@ -278,7 +236,6 @@ ul {
   }
 }
 
-/* Contact Section */
 #contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,7 +262,7 @@ ul {
 }
 
 label {
-  color: var(--text-clr-primary);
+  color: #ffffff;
   font-size: 1.25rem;
   margin: 1rem;
 }
@@ -328,18 +285,18 @@ button {
   height: 3rem;
   margin: 3rem 0 8rem 0;
   border-radius: 15px;
-  background-color: var(--dark-primary-clr);
-  color: var(--text-clr-primary);
+  background-color: #050a27;
+  color: #ffffff;
   font-size: 1.5rem;
 }
 
 button:hover {
-  color: var(--secondary-clr);
+  color: goldenrod;
 }
 
 .error-text {
-  color: var(--secondary-clr);
-  background-color: var(--light-dark-primary-clr);
+  color: goldenrod;
+  background-color: rgba(5, 10, 39, 0.65);
   font-size: 1.5rem;
   width: 50%;
   margin: 0 auto;
@@ -354,7 +311,6 @@ button:hover {
   }
 }
 
-/* Resume Section */
 .skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,7 +321,7 @@ button:hover {
   margin: 0 auto;
   width: 30%;
   padding: 1rem;
-  color: var(--text-clr-primary);
+  color: #ffffff;
   height: 50vh;
 }
 
@@ -373,7 +329,8 @@ button:hover {
   font-size: 1.5rem;
 }
 
-.frontEndSkills, .backEndSkills {
+.frontEndSkills,
+.backEndSkills {
   padding: 1rem;
   background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
@@ -388,16 +345,16 @@ button:hover {
   font-size: 1.75rem;
   margin: 0;
   padding: 2rem 0 2rem 0;
-  color: var(--text-clr-primary);
+  color: #ffffff;
 }
 
 .resumeDownload > a {
   text-decoration: none;
-  color: var(--text-clr-primary);
+  color: #ffffff;
 }
 
 .resumeDownload > a:hover {
-  color: var(--secondary-clr);
+  color: goldenrod;
 }
 
 @media screen and (max-width: 1200px) {
@@ -424,10 +381,9 @@ button:hover {
   }
 }
 
-/* Footer Section */
 .App-footer {
   background-image: url("../../assets/images/technology-background.jpg");
-  color: var(--text-clr-primary);
+  color: #095e93;
   height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,12 +399,54 @@ button:hover {
 }
 
 .icons {
-  background-color: var(--primary-clr);
+  background-color: #095e93;
   margin: 0 2rem;
   padding: 1.125rem;
 }
 
 .icons:hover {
-  background-color: var(--secondary-clr);
+  background-color: goldenrod;
+}
+
+html,
+body {
+  height: 100vh;
+  margin: 0 auto;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-body {
+  background-color: #095e93;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.wrapper {
+  background-color: #095e93;
+  padding: 0;
+  text-align: center;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

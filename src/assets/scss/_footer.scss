@@ -1,0 +1,19 @@
+.App-footer {
+  background-image: url('../../assets/images/technology-background.jpg');
+  color: $primary-clr;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.icons {
+  background-color: $primary-clr;
+  margin: 0 2rem;
+  padding: 1.125rem;
+}
+
+.icons:hover {
+  background-color: $secondary-clr;
+}

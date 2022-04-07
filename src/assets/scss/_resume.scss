@@ -1,0 +1,63 @@
+.skills {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 30%;
+  padding: 1rem;
+  color: $text-clr-primary;
+  height: 50vh;
+}
+
+.skills p {
+  font-size: 1.5rem;
+}
+
+.frontEndSkills,
+.backEndSkills {
+  padding: 1rem;
+  background-image: url('../../assets/images/technology-background.jpg');
+  border-radius: 15px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.resumeDownload {
+  font-size: 1.75rem;
+  margin: 0;
+  padding: 2rem 0 2rem 0;
+  color: $text-clr-primary;
+}
+
+.resumeDownload > a {
+  text-decoration: none;
+  color: $text-clr-primary;
+}
+
+.resumeDownload > a:hover {
+  color: $secondary-clr;
+}
+
+@media screen and (max-width: 1200px) {
+  .skills {
+    width: 50%;
+  }
+
+  .wrapper {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .skills {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills {
+    flex-direction: column;
+  }
+}

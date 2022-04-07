@@ -1,0 +1,106 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 33%;
+}
+
+.card {
+  transition: all 0.35s;
+  position: relative;
+  border-radius: 15px;
+}
+
+.card:hover {
+  background-image: url('../../assets/images/technology-background.jpg');
+}
+
+.project-image {
+  width: 95%;
+  padding: 1rem 0;
+}
+
+.image-container:hover + .content {
+  display: block;
+}
+
+.content:hover {
+  display: block;
+}
+
+.card-title {
+  color: $secondary-clr;
+  background-image: url('../../assets/images/technology-background.jpg');
+  border-radius: 15px;
+  padding: 0.5rem;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.card-title:hover {
+  font-size: 2rem;
+  transition: all 0.35s;
+}
+
+.gitIcon {
+  background-color: $primary-clr;
+  width: 3.5rem;
+  transition: all 0.35s;
+  border-radius: 15px;
+}
+
+.gitIcon:hover {
+  width: 4.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .column {
+    flex: 100%;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gitIcon {
+    width: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .column {
+    flex: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .column {
+    flex: 33%;
+  }
+}
