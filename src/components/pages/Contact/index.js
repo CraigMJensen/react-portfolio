@@ -72,7 +72,7 @@ function Contact() {
           />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message"></label>
           <textarea
             placeholder="Enter message here..."
             name="message"

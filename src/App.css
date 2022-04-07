@@ -118,17 +118,19 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  
 }
 
 .column {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 1;
+  flex: 50%;
 }
 
 .card {
   transition: all .35s;
+  position: relative;
 }
 
 .card:hover {
@@ -144,29 +146,21 @@ ul {
 
 .content {
   position: absolute;
-  display: none;
   font-size: 2rem; 
 }
 
-.image-container {
-  position: relative;
-  
-  
-  
-}
-
 .project-image {
-  width: 100%;
+  width: 95%;
   padding: 1rem 0;
+  
 }
 
-.image-container:hover + .content {
+/* .image-container:hover + .content {
   display: block;
-}
+} */
 
 .content:hover {
   display: block; 
-  
 }
 
 .gitIcon {
@@ -190,7 +184,6 @@ ul {
 }
 
 #contact-form > div {
-  padding: .5rem;
   width: 50%;
 }
 
