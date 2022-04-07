@@ -357,11 +357,19 @@ button:hover {
   .skills {
     width: 50%
   }
+
+  .wrapper {
+    height: 100vh;
+  }
 }
 
 @media screen and (min-width: 1201px) {
   .skills {
     width: 50%;
+  }
+
+  .wrapper {
+    height: 100vh;
   }
 }
 
