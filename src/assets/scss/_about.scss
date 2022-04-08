@@ -1,3 +1,9 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title,
 .aboutMe {
   margin: 0 auto;
@@ -6,10 +12,10 @@
   width: 60%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .aboutMe {
-  padding: 2.5rem 0;
   font-size: 1.125rem;
 }
 

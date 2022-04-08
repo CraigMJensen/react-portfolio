@@ -12,6 +12,10 @@
   flex: 33%;
 }
 
+.project-container {
+  margin-bottom: 2rem;
+}
+
 .card {
   transition: all 0.35s;
   position: relative;
@@ -27,14 +31,6 @@
   padding: 1rem 0;
 }
 
-.image-container:hover + .content {
-  display: block;
-}
-
-.content:hover {
-  display: block;
-}
-
 .card-title {
   color: $secondary-clr;
   background-image: url('../../assets/images/technology-background.jpg');
@@ -46,20 +42,11 @@
   text-decoration: none;
 }
 
-.card-title:hover {
-  font-size: 2rem;
-  transition: all 0.35s;
-}
-
 .gitIcon {
   background-color: $primary-clr;
   width: 3.5rem;
   transition: all 0.35s;
   border-radius: 15px;
-}
-
-.gitIcon:hover {
-  width: 4.25rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -71,6 +58,23 @@
     display: none;
     font-size: 1.5rem;
   }
+
+  .card-title:hover {
+    font-size: 2rem;
+    transition: all 0.35s;
+  }
+
+  .gitIcon:hover {
+    width: 4.25rem;
+  }
+
+  .content:hover {
+    display: block;
+  }
+
+  .image-container:hover + .content {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -80,12 +84,19 @@
 
   .card {
     display: flex;
+    background-image: url('../../assets/images/technology-background.jpg');
+    margin: 1rem;
   }
 
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
+  }
+
+  .image-container {
+    width: 80%;
   }
 
   .gitIcon {
