@@ -246,8 +246,18 @@ code {
   .image-container {
     width: 70%;
   }
+  .card-title {
+    background-image: none;
+    color: #ffffff;
+  }
+  .card-title:hover {
+    color: goldenrod;
+  }
   .gitIcon {
-    width: 2rem;
+    width: 2.5rem;
+  }
+  .gitIcon:hover {
+    width: 3rem;
   }
 }
 

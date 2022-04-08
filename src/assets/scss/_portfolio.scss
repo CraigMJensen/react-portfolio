@@ -99,9 +99,24 @@
     width: 70%;
   }
 
-  .gitIcon {
-    width: 2rem;
+  .card-title {
+    background-image: none;
+    color: $text-clr-primary;
   }
+
+  .card-title:hover {
+    color: $secondary-clr;
+  }
+
+  .gitIcon {
+    width: 2.5rem;
+  }
+
+  .gitIcon:hover {
+    width: 3rem;
+  }
+
+
 }
 
 @media screen and (min-width: 768px) {
