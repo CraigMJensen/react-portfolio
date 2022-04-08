@@ -8,7 +8,6 @@
 ## Table of Contents
 
 - [Links](#links)
-- [License](#license)
 
 ## Links
 
