@@ -8,6 +8,7 @@
 ## Table of Contents
 
 - [Links](#links)
+- [Questions?](#questions)
 
 ## Links
 
@@ -18,6 +19,7 @@
 
 ## Images
 
+![Portfolio](src/assets/images/portfolio.png)
 
 ## Questions?
 
