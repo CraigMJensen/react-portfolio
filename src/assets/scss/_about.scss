@@ -24,6 +24,19 @@
   border-radius: 40px;
 }
 
+.email-link {
+  color: $text-clr-primary;
+  a {
+    text-decoration: none;
+    color: $text-clr-primary;
+  }
+  a:hover {
+    color: $secondary-clr;
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
   .aboutMe {
     padding: 1rem;

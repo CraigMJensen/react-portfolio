@@ -26,6 +26,7 @@ function About() {
         order. Keeping organized logs of all maintenance and safety checks that
         are performed and when they are due.{' '}
       </p>
+      <p className='email-link'>Email me @ <a href='mailto:CMJensen82@gmail.com'>CMJensen82@gmail.com</a></p>
     </div>
   );
 }

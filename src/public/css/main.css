@@ -100,6 +100,19 @@ code {
   border-radius: 40px;
 }
 
+.email-link {
+  color: #ffffff;
+}
+
+.email-link a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.email-link a:hover {
+  color: goldenrod;
+}
+
 @media screen and (max-width: 768px) {
   .aboutMe {
     padding: 1rem;
