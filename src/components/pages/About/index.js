@@ -10,21 +10,7 @@ function About() {
         </div>
       
       <p className='aboutMe'>
-        Certificate in Full Stack Web Development from UT coding bootcamp with a
-        strong background in surgical services and anesthesia. Coding skills in
-        HTML, CSS, SASS, JavaScript, JQuery, Bootstrap, Handlebars, Node,
-        Express, React, MongoDB, MySql, Sequelize, Git, and Linux commands. I
-        have 20 years of experience in Surgery as a Certified Anesthesia
-        Technician. My medical background will help me with web development
-        because surgery is a fast-paced, time-sensitive environment with little
-        room for error. Learning new processes and working with new technologies
-        is taught with a ‘see one, do one, teach one’ mentality in surgery,
-        helping me retain information through doing and teaching while still
-        learning. Working closely with a team to maintain a clean and efficient
-        workspace has taught me team-work, collaboration, and compromise. As a
-        technician, I keep the anesthesia machines and devices in safe, working
-        order. Keeping organized logs of all maintenance and safety checks that
-        are performed and when they are due.{' '}
+      Certificate in Full Stack Web Development from UT coding bootcamp with a strong background in surgical services and anesthesia. Hands-on experience building user-focused applications using HTML, CSS, JavaScript, MySQL, MongoDB, Express, React, Node.js and more. Abilities to quickly learn new skills, respond quickly and effectively to emergencies, and staying calm under pressure will aid me in the fast-paced world of web development. {' '}
       </p>
       <p className='email-link'>Email me @ <a href='mailto:CMJensen82@gmail.com'>CMJensen82@gmail.com</a></p>
     </div>
