@@ -76,7 +76,6 @@ function Contact() {
           type="text"
           name="from_name"
           placeholder="Your name"
-          value={val}
           onBlur={handleChange}
         />
         <label htmlFor="email">Email</label>
@@ -85,7 +84,6 @@ function Contact() {
           type="email"
           name="reply_to"
           placeholder="Your email"
-          value={val}
           onBlur={handleChange}
         />
         <label htmlFor="message">Message</label>
