@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.9475fac2.css",
-    "main.js": "/react-portfolio/static/js/main.a6426256.js",
+    "main.css": "/react-portfolio/static/css/main.8718d943.css",
+    "main.js": "/react-portfolio/static/js/main.36d8a2c9.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/technology-background.jpg": "/react-portfolio/static/media/technology-background.154f23d4d3287295592c.jpg",
     "static/media/about.jpg": "/react-portfolio/static/media/about.7d8a0735f9286c64e0c7.jpg",
@@ -16,12 +16,12 @@
     "index.html": "/react-portfolio/index.html",
     "static/media/stackOverflow.svg": "/react-portfolio/static/media/stackOverflow.623087f8cf666c88c751db7ee2b6939d.svg",
     "static/media/linkedIn.svg": "/react-portfolio/static/media/linkedIn.0618cc9075b54a042c69cdf3e1cb1fa4.svg",
-    "main.9475fac2.css.map": "/react-portfolio/static/css/main.9475fac2.css.map",
-    "main.a6426256.js.map": "/react-portfolio/static/js/main.a6426256.js.map",
+    "main.8718d943.css.map": "/react-portfolio/static/css/main.8718d943.css.map",
+    "main.36d8a2c9.js.map": "/react-portfolio/static/js/main.36d8a2c9.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9475fac2.css",
-    "static/js/main.a6426256.js"
+    "static/css/main.8718d943.css",
+    "static/js/main.36d8a2c9.js"
   ]
 }
