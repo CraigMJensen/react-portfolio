@@ -42,9 +42,7 @@ function Contact() {
       }
     }
 
-    
-      setToSend({ ...toSend, [e.target.name]: e.target.value });
-    
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   }
 
   function handleSubmit(e) {
@@ -52,14 +50,15 @@ function Contact() {
     send('service_xb918as', 'template_dqn6h9r', toSend, '1A0DYHbHvH50Yv71j')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        alert('Thank you for contacting me!');
       })
       .catch((err) => {
         console.log('FAILED...', err);
       });
-      
   }
 
   const [text, enableButton] = useState('');
+  const [val, setVal] = useState();
 
   const handleTextChange = (e) => {
     enableButton(e.target.value);
@@ -77,8 +76,8 @@ function Contact() {
           type="text"
           name="from_name"
           placeholder="Your name"
+          value={val}
           onBlur={handleChange}
-          
         />
         <label htmlFor="email">Email</label>
         <input
@@ -86,14 +85,15 @@ function Contact() {
           type="email"
           name="reply_to"
           placeholder="Your email"
+          value={val}
           onBlur={handleChange}
-          
         />
         <label htmlFor="message">Message</label>
         <textarea
           id="message"
           name="message"
           placeholder="Your message here..."
+          value={val}
           onBlur={handleChange}
           onChange={handleTextChange}
         />
@@ -103,7 +103,12 @@ function Contact() {
           </div>
         )}
 
-        <button type="submit" data-testid="button" disabled={!text}>
+        <button
+          type="submit"
+          data-testid="button"
+          disabled={!text}
+          onClick={() => setVal(() => '')}
+        >
           Submit
         </button>
       </form>
