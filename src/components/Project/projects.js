@@ -16,11 +16,11 @@ export const projectData = [
     deployed: "https://teksess.herokuapp.com/"
   },
   {
-    title: "Tech Blog",
-    description: "Blog site to share information about the tech industry!",
-    image: require("../../assets/images/tech-blog.png"),
-    github: "https://github.com/CraigMJensen/tech-blog",
-    deployed: "https://frozen-citadel-69785.herokuapp.com/"
+    title: "Hawker",
+    description: "E-commerce website to buy and sell any and everything!",
+    image: require("../../assets/images/hawker-homepage.png"),
+    github: "https://github.com/CraigMJensen/Hawker",
+    deployed: "https://texas-hawker.herokuapp.com/"
   },
   {
     title: "Day Scheduler",

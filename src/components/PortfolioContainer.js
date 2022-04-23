@@ -26,7 +26,7 @@ function PortfolioContainer() {
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <div>
+    <div className='pageContainer'>
       <div className="App">
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
       </div>
