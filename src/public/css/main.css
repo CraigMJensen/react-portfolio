@@ -46,19 +46,26 @@ code {
   border-radius: 15px 15px 0 0;
 }
 
+.nav-link:hover {
+  color: goldenrod;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
+.nav-link:not(:hover) {
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
 .active {
   color: goldenrod;
   background-color: #095e93;
-  padding: 1rem;
+  padding: .5rem;
 }
 
 .list-links {
   width: 100%;
   padding-bottom: .5rem;
-}
-
-.nav-link:hover {
-  color: goldenrod;
 }
 
 .about-page {
@@ -95,9 +102,26 @@ code {
   font-size: 1.125rem;
 }
 
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0 1rem;
+    width: 80%;
+  }
+}
+
 .about-image {
   width: 80%;
   border-radius: 40px;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+          box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+}
+
+@media (min-width: 768px) {
+  .about-image {
+    width: 40%;
+  }
 }
 
 .email-link {
@@ -111,21 +135,14 @@ code {
 
 .email-link a:hover {
   color: goldenrod;
+  text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
-@media screen and (max-width: 768px) {
-  .aboutMe {
-    padding: 1rem;
-    font-size: 1rem;
-    margin: 0 1rem;
-    width: 80%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .about-image {
-    width: 40%;
-  }
+.email-link a:not(:hover) {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .row {
@@ -213,9 +230,6 @@ code {
   .gitIcon:hover {
     width: 4.25rem;
   }
-  .content:hover {
-    display: block;
-  }
   .image-container:hover + .content {
     display: block;
   }
@@ -273,13 +287,13 @@ code {
     background-image: none;
     color: #ffffff;
   }
-  .card-title:hover {
+  :hover {
     color: goldenrod;
   }
   .gitIcon {
     width: 2.5rem;
   }
-  .gitIcon:hover {
+  :hover {
     width: 3rem;
   }
 }
@@ -298,15 +312,13 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto 2rem auto;
-  width: 60%;
+  margin: 0 auto;
+  width: 75%;
   padding: 0 2rem;
   background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
-}
-
-#contact-form div {
-  width: 50%;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+          box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 
 label {
@@ -316,26 +328,29 @@ label {
 }
 
 input {
-  width: 50%;
+  width: 100%;
   height: 2rem;
-  border-radius: 15px;
+  border-radius: 1em;
 }
 
 textarea {
   width: 100%;
   height: 10rem;
-  border-radius: 15px;
-  margin-top: 1.5rem;
+  border-radius: 1em;
 }
 
 button {
   width: 20%;
   height: 3rem;
-  margin: 3rem 0 8rem 0;
-  border-radius: 15px;
-  background-color: #050a27;
+  margin: 1rem 0 1rem 0;
+  border-radius: 1em;
+  background-color: #095e93;
   color: #ffffff;
+  text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+          box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
   font-size: 1.5rem;
+  width: 100%;
 }
 
 button:hover {
@@ -350,52 +365,37 @@ button:hover {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
-  button {
-    width: 50%;
-  }
-  input {
-    width: 80%;
-  }
-  #contact-form {
-    margin-bottom: 1rem;
-  }
-}
-
 .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-  width: 30%;
-  padding: 1rem 0 15rem 0;
+  padding: 1rem 0 1rem 0;
   color: #ffffff;
 }
 
 .skills p {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .frontEndSkills,
 .backEndSkills {
   padding: 1rem;
+  margin: 1rem;
   background-image: url("../../assets/images/technology-background.jpg");
   border-radius: 15px;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+          box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 
 .list {
   list-style: none;
   padding: 0;
+  font-size: 1.5rem;
 }
 
 .resumeDownload {
   font-size: 1.75rem;
   margin: 0;
-  padding: 3rem 0 3rem 0;
+  padding: 2rem 0 .5rem 0;
   color: #ffffff;
+  text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 
 .resumeDownload > a {
@@ -405,34 +405,6 @@ button:hover {
 
 .resumeDownload > a:hover {
   color: goldenrod;
-}
-
-@media screen and (max-width: 1200px) {
-  .skills {
-    width: 50%;
-  }
-  .wrapper {
-    height: 100vh;
-  }
-}
-
-@media screen and (min-width: 1201px) {
-  .skills {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .skills {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 1rem;
-  }
-  .backEndSkills {
-    margin-top: 1rem;
-  }
 }
 
 .App-footer {
@@ -448,8 +420,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  bottom: 0;
 }
 
 .icons {
@@ -460,6 +431,13 @@ button:hover {
 
 .icons:hover {
   background-color: goldenrod;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.icons:not(:hover) {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 html,
@@ -494,13 +472,21 @@ body {
   padding: 0;
   text-align: center;
   overflow-y: auto;
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  min-height: 100vh;
 }
 
 ul {
   margin-bottom: 0;
   padding-bottom: 1rem;
+}
+
+.pageContainer {
+  position: relative;
+  min-height: 100%;
+}
+
+.title {
+  padding: 1rem;
+  text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 /*# sourceMappingURL=main.css.map */
