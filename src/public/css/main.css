@@ -46,19 +46,30 @@ code {
   border-radius: 15px 15px 0 0;
 }
 
+.nav-link:hover {
+  color: goldenrod;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.nav-link:not(:hover) {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
 .active {
   color: goldenrod;
   background-color: #095e93;
   padding: 1rem;
+  -webkit-transition: background-color 150ms;
+  transition: background-color 150ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .list-links {
   width: 100%;
-  padding-bottom: .5rem;
-}
-
-.nav-link:hover {
-  color: goldenrod;
+  padding-bottom: 0.5rem;
 }
 
 .about-page {
@@ -124,7 +135,7 @@ code {
 
 @media screen and (min-width: 768px) {
   .about-image {
-    width: 40%;
+    max-width: 40%;
   }
 }
 
@@ -151,9 +162,6 @@ code {
           flex-direction: column;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  -webkit-box-flex: 33%;
-      -ms-flex: 33%;
-          flex: 33%;
 }
 
 .project-container {
@@ -168,7 +176,14 @@ code {
 }
 
 .card:hover {
-  background-image: url("../../assets/images/technology-background.jpg");
+  background-color: #050a27;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.card:not(:hover) {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .project-image {
@@ -210,13 +225,33 @@ code {
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
   }
+  .card-title:not(:hover) {
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+  }
   .gitIcon:hover {
     width: 4.25rem;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .gitIcon:not(:hover) {
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+  }
+  .content {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
   .content:hover {
     display: block;
   }
+  .content:not(:hover) {
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+  }
   .image-container:hover + .content {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     display: block;
   }
 }
@@ -276,12 +311,6 @@ code {
   .card-title:hover {
     color: goldenrod;
   }
-  .gitIcon {
-    width: 2.5rem;
-  }
-  .gitIcon:hover {
-    width: 3rem;
-  }
 }
 
 #contact-form {
@@ -340,6 +369,13 @@ button {
 
 button:hover {
   color: goldenrod;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+button:not(:hover) {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
 }
 
 .error-text {
@@ -450,6 +486,7 @@ button:hover {
           align-items: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  bottom: 0;
 }
 
 .icons {
@@ -460,6 +497,13 @@ button:hover {
 
 .icons:hover {
   background-color: goldenrod;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.icons:not(:hover) {
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
 }
 
 html,
@@ -502,5 +546,9 @@ body {
 ul {
   margin-bottom: 0;
   padding-bottom: 1rem;
+}
+
+.pageContainer {
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */

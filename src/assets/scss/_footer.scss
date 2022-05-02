@@ -6,17 +6,18 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  position: absolute;
   bottom: 0;
-  
 }
 
 .icons {
   background-color: $primary-clr;
   margin: 0 2rem;
   padding: 1.125rem;
-}
-
-.icons:hover {
-  background-color: $secondary-clr;
+  &:hover {
+    background-color: $secondary-clr;
+    transition: all 200ms;
+  }
+  &:not(:hover) {
+    transition: all 600ms;
+  }
 }

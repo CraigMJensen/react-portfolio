@@ -35,8 +35,6 @@
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
   .aboutMe {
     padding: 1rem;
@@ -48,6 +46,6 @@
 
 @media screen and (min-width: 768px) {
   .about-image {
-    width: 40%;
+    max-width: 40%;
   }
 }

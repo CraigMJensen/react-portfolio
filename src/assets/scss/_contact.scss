@@ -41,10 +41,13 @@ button {
   background-color: $dark-primary-clr;
   color: $text-clr-primary;
   font-size: 1.5rem;
-}
-
-button:hover {
-  color: $secondary-clr;
+  &:hover {
+    color: $secondary-clr;
+    transition: all 200ms;
+  }
+  &:not(:hover) {
+    transition: all 200ms;
+  }
 }
 
 .error-text {

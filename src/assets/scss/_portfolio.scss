@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
-  flex: 33%;
 }
 
 .project-container {
@@ -20,11 +19,18 @@
   transition: all 0.35s;
   position: relative;
   border-radius: 15px;
+  &:hover {
+    background-color: $dark-primary-clr;
+    transition: all 500ms;
+  }
+  &:not(:hover) {
+    transition: all 500ms;
+  }
 }
 
-.card:hover {
-  background-image: url('../../assets/images/technology-background.jpg');
-}
+// .card:hover {
+//   background-image: url('../../assets/images/technology-background.jpg');
+// }
 
 .project-image {
   width: 95%;
@@ -59,20 +65,38 @@
     font-size: 1.5rem;
   }
 
-  .card-title:hover {
-    font-size: 2rem;
-    transition: all 0.35s;
+  .card-title {
+    &:hover {
+      font-size: 2rem;
+      transition: all 0.35s;
+    }
+    &:not(:hover) {
+      transition: all 500ms;
+    }
   }
 
-  .gitIcon:hover {
-    width: 4.25rem;
+  .gitIcon {
+    &:hover {
+      width: 4.25rem;
+      transition: all 0.35s;
+    }
+    &:not(:hover) {
+      transition: all 500ms;
+    }
   }
 
-  .content:hover {
-    display: block;
+  .content {
+    transition: all 0.5s;
+    &:hover {
+      display: block;
+    }
+    &:not(:hover) {
+      transition: all 500ms;
+    }
   }
 
   .image-container:hover + .content {
+    transition: all 0.5s;
     display: block;
   }
 }
@@ -119,13 +143,5 @@
 
   .card-title:hover {
     color: $secondary-clr;
-  }
-
-  .gitIcon {
-    width: 2.5rem;
-  }
-
-  .gitIcon:hover {
-    width: 3rem;
   }
 }

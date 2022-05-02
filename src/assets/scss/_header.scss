@@ -24,21 +24,24 @@
   text-decoration: none;
   color: $text-clr-primary;
   border-radius: 15px 15px 0 0;
-  
+  &:hover {
+    color: $secondary-clr;
+    transition: all 200ms;
+  }
+  &:not(:hover) {
+    transition: all 200ms;
+  }
 }
 
 .active {
   color: $secondary-clr;
   background-color: $primary-clr;
   padding: 1rem;
-  
+  transition: background-color 150ms;
+  transition-timing-function: ease-in-out;
 }
 
 .list-links {
   width: 100%;
-  padding-bottom: .5rem;
-}
-
-.nav-link:hover {
-  color: $secondary-clr;
+  padding-bottom: 0.5rem;
 }
