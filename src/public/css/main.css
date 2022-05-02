@@ -481,13 +481,20 @@ button:not(:hover) {
   text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 
-.resumeDownload > a {
+.resumeDownload a {
   text-decoration: none;
   color: #ffffff;
 }
 
-.resumeDownload > a:hover {
+.resumeDownload a:hover {
   color: goldenrod;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+.resumeDownload a:not(:hover) {
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
 }
 
 .App-footer {

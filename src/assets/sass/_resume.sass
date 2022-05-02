@@ -27,9 +27,11 @@
   padding: 2rem 0 .5rem 0
   color: $text-clr-primary
   text-shadow: .25rem .25rem .5rem $dark-primary-clr
-
-.resumeDownload > a
-  text-decoration: none
-  color: $text-clr-primary
-  &:hover
-    color: $secondary-clr
+  a
+    text-decoration: none
+    color: $text-clr-primary
+    &:hover
+      color: $secondary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms
