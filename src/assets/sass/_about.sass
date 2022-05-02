@@ -24,7 +24,10 @@
 .about-image
   width: 80%
   border-radius: 40px
-  box-shadow: .25rem .25rem .5rem $dark-primary-clr
+  box-shadow: 2px 2px 5px $dark-primary-clr, -2px -2px 5px $dark-primary-clr, -2px 2px 5px $dark-primary-clr, 2px -2px 5px $dark-primary-clr
+  &:hover
+    box-shadow: 2px 2px 5px $secondary-clr, -2px -2px 5px $secondary-clr, -2px 2px 5px $secondary-clr, 2px -2px 5px $secondary-clr
+
   @media (min-width: $bp-med)
     width: 40%
 

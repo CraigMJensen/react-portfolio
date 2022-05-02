@@ -48,8 +48,10 @@ code {
 
 .nav-link:hover {
   color: goldenrod;
-  -webkit-transition: all 150ms;
-  transition: all 150ms;
+  -webkit-transition: all 50ms;
+  transition: all 50ms;
+  background-color: #095e93;
+  padding: .5rem;
 }
 
 .nav-link:not(:hover) {
@@ -114,8 +116,13 @@ code {
 .about-image {
   width: 80%;
   border-radius: 40px;
-  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
-          box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+  -webkit-box-shadow: 2px 2px 5px #050a27, -2px -2px 5px #050a27, -2px 2px 5px #050a27, 2px -2px 5px #050a27;
+          box-shadow: 2px 2px 5px #050a27, -2px -2px 5px #050a27, -2px 2px 5px #050a27, 2px -2px 5px #050a27;
+}
+
+.about-image:hover {
+  -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+          box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
 }
 
 @media (min-width: 768px) {
@@ -166,76 +173,9 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-flex: 33%;
-      -ms-flex: 33%;
-          flex: 33%;
 }
 
-.project-container {
-  margin-bottom: 2rem;
-}
-
-.card {
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  position: relative;
-  border-radius: 15px;
-}
-
-.card:hover {
-  background-image: url("../../assets/images/technology-background.jpg");
-}
-
-.project-image {
-  width: 95%;
-  padding: 1rem 0;
-}
-
-.card-title {
-  color: goldenrod;
-  background-image: url("../../assets/images/technology-background.jpg");
-  border-radius: 15px;
-  padding: 0.5rem;
-}
-
-.content a {
-  text-decoration: none;
-}
-
-.gitIcon {
-  background-color: #095e93;
-  width: 3.5rem;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  border-radius: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .content {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    position: absolute;
-    display: none;
-    font-size: 1.5rem;
-  }
-  .card-title:hover {
-    font-size: 2rem;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-  }
-  .gitIcon:hover {
-    width: 4.25rem;
-  }
-  .image-container:hover + .content {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .column {
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
@@ -243,7 +183,7 @@ code {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .column {
     -webkit-box-flex: 33%;
         -ms-flex: 33%;
@@ -251,20 +191,110 @@ code {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .column {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-  }
+.card {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  position: relative;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+  background-image: url("../../assets/images/technology-background.jpg");
+  -webkit-box-shadow: 5px 5px 8px #050a27;
+          box-shadow: 5px 5px 8px #050a27;
+}
+
+@media (min-width: 768px) {
   .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-image: url("../../assets/images/technology-background.jpg");
-    margin: 1rem;
+    background-image: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
+  .card:hover {
+    background-color: #050a27;
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+  .card:not(:hover) {
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+}
+
+.project-image {
+  width: 100%;
+  padding: 1rem 0 0 0;
+  -webkit-box-shadow: 5px 5px 8px #050a27;
+          box-shadow: 5px 5px 8px #050a27;
+}
+
+@media (min-width: 768px) {
+  .project-image {
+    padding: 0;
+  }
+}
+
+.card-title {
+  color: #ffffff;
+  background-image: none;
+  border-radius: 15px;
+  padding: .5rem;
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    background-image: url("../../assets/images/technology-background.jpg");
+  }
+  .card-title:hover {
+    color: goldenrod;
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+  .card-title:not(:hover) {
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
   .content {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -272,29 +302,51 @@ code {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 25%;
+    opacity: 0;
+    font-size: 1.5rem;
+    width: 100%;
   }
+  .content:hover {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  width: 70%;
+}
+
+@media (min-width: 768px) {
   .image-container {
-    width: 70%;
+    width: 100%;
   }
-  .card-title {
-    background-image: none;
-    color: #ffffff;
-  }
-  :hover {
-    color: goldenrod;
-  }
+}
+
+.gitIcon {
+  background-color: #095e93;
+  padding: .5rem;
+  width: 3rem;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+          box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+}
+
+@media (min-width: 768px) {
   .gitIcon {
-    width: 2.5rem;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
-  :hover {
-    width: 3rem;
+  .gitIcon:hover {
+    width: 4.25rem;
+    -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+            box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+  .gitIcon:not(:hover) {
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
   }
 }
 
@@ -319,6 +371,12 @@ code {
   border-radius: 15px;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
           box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+}
+
+@media (min-width: 768px) {
+  #contact-form {
+    width: 50%;
+  }
 }
 
 label {
@@ -355,6 +413,19 @@ button {
 
 button:hover {
   color: goldenrod;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+button:not(:hover) {
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+@media (min-width: 768px) {
+  button {
+    width: 50%;
+  }
 }
 
 .error-text {
@@ -372,6 +443,18 @@ button:hover {
 
 .skills p {
   font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .skills {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .frontEndSkills,
@@ -414,9 +497,9 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -425,12 +508,13 @@ button:hover {
 
 .icons {
   background-color: #095e93;
-  margin: 0 2rem;
   padding: 1.125rem;
 }
 
 .icons:hover {
   background-color: goldenrod;
+  -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+          box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
   -webkit-transition: all 500ms;
   transition: all 500ms;
 }

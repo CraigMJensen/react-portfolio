@@ -7,93 +7,89 @@
 .column
   display: flex
   flex-direction: column
-  flex-basis: 100%
-  flex: 33%
-
-.project-container
-  margin-bottom: 2rem
+  @media (min-width: $bp-med)
+    flex: 50%
+  @media (min-width: $bp-large)
+    flex: 33%
 
 .card
   transition: all 0.35s
   position: relative
   border-radius: 15px
-  &:hover
-    background-image: url('../../assets/images/technology-background.jpg')
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 1rem
+  background-image: url('../../assets/images/technology-background.jpg')
+  box-shadow: 5px 5px 8px $dark-primary-clr
+  @media (min-width: 768px)
+    background-image: none
+    box-shadow: none
+    &:hover
+      background-color: $dark-primary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms
 
 .project-image
-  width: 95%
-  padding: 1rem 0
+  width: 100%
+  padding: 1rem 0 0 0
+  box-shadow: 5px 5px 8px $dark-primary-clr
+  @media (min-width: 768px)
+    padding: 0
 
 .card-title
-  color: $secondary-clr
-  background-image: url('../../assets/images/technology-background.jpg')
+  color: $text-clr-primary
+  background-image: none
   border-radius: 15px
-  padding: 0.5rem
+  padding: .5rem
+  @media (min-width: 768px)
+    background-image: url('../../assets/images/technology-background.jpg')
+    &:hover
+      color: $secondary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms
 
-.content a
-  text-decoration: none
-
-.gitIcon
-  background-color: $primary-clr
-  width: 3.5rem
-  transition: all 0.35s
-  border-radius: 15px
-
-@media screen and (min-width: 768px)
-  .content
+.content
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  width: 100%
+  a
+    text-decoration: none
+  @media (min-width: 768px)
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
     position: absolute
-    display: none
-    font-size: 1.5rem
-
-  .card-title:hover
-    font-size: 2rem
-    transition: all 0.35s
-
-  .gitIcon:hover
-    width: 4.25rem
-
-  .image-container:hover + .content
-    display: block
-
-@media screen and (min-width: 768px)
-  .column
-    flex: 50%
-
-@media screen and (min-width: 1200px)
-  .column
-    flex: 33%
-
-@media only screen and (max-width: 768px)
-  .column
-    flex: 100%
-
-  .card
-    display: flex
-    background-image: url('../../assets/images/technology-background.jpg')
-    margin: 1rem
-
-  .content
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
-    width: 25%
+    opacity: 0
+    font-size: 1.5rem
+    width: 100%
+    &:hover
+      opacity: 1
 
-  .image-container
-    width: 70%
+.image-container
+  width: 70%
+  @media (min-width: 768px)
+    width: 100%
 
-  .card-title
-    background-image: none
-    color: $text-clr-primary
-
-  &:hover
-    color: $secondary-clr
-
-  .gitIcon
-    width: 2.5rem
-
-  &:hover
-    width: 3rem
+.gitIcon
+  background-color: $primary-clr
+  padding: .5rem
+  width: 3rem
+  transition: all 0.35s
+  border-radius: 15px
+  box-shadow: 2px 2px 5px $secondary-clr, -2px -2px 5px $secondary-clr, -2px 2px 5px $secondary-clr, 2px -2px 5px $secondary-clr
+  @media (min-width: 768px)
+    box-shadow: none
+    &:hover
+      width: 4.25rem
+      box-shadow: 2px 2px 5px $secondary-clr, -2px -2px 5px $secondary-clr, -2px 2px 5px $secondary-clr, 2px -2px 5px $secondary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms
