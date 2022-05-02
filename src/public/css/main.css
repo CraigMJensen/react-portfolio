@@ -287,13 +287,13 @@ code {
     background-image: none;
     color: #ffffff;
   }
-  :hover {
+  .card-title:hover {
     color: goldenrod;
   }
   .gitIcon {
     width: 2.5rem;
   }
-  :hover {
+  .gitIcon:hover {
     width: 3rem;
   }
 }
