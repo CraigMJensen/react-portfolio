@@ -1,0 +1,36 @@
+@import './index', './variables', './header', './about', './portfolio', './contact', './resume', './footer'
+
+html,
+body
+  height: 100vh
+  margin: 0 auto
+
+body
+  display: flex
+  flex-direction: column
+
+.App
+  text-align: center
+
+.App-body
+  background-color: $primary-clr
+  flex: 1 0 auto
+
+.wrapper
+  background-color: $primary-clr
+  padding: 0
+  text-align: center
+  overflow-y: auto
+  min-height: 100vh
+
+ul
+  margin-bottom: 0
+  padding-bottom: 1rem
+
+.pageContainer
+  position: relative
+  min-height: 100%
+
+.title
+  padding: 1rem
+  text-shadow: .25rem .25rem .5rem $dark-primary-clr

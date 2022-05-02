@@ -6,10 +6,8 @@ import About from './pages/About';
 import Footer from '../components/Footer';
 import Nav from './Nav';
 
-
 function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
-
 
   const renderPage = () => {
     if (currentPage === 'Portfolio') {
@@ -26,14 +24,12 @@ function PortfolioContainer() {
 
   const handlePageChange = (page) => setCurrentPage(page);
   return (
-    <div className='pageContainer'>
+    <div className="pageContainer">
       <div className="App">
         <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
       </div>
-      <div className="App-body">
-        {renderPage()}
-      </div>
-      <div className='App-footer'>
+      <div className="App-body">{renderPage()}</div>
+      <div className="footer-wrapper">
         <Footer />
       </div>
     </div>

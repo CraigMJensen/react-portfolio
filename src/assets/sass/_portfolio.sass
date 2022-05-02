@@ -1,0 +1,99 @@
+.row
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  width: 100%
+
+.column
+  display: flex
+  flex-direction: column
+  flex-basis: 100%
+  flex: 33%
+
+.project-container
+  margin-bottom: 2rem
+
+.card
+  transition: all 0.35s
+  position: relative
+  border-radius: 15px
+  &:hover
+    background-image: url('../../assets/images/technology-background.jpg')
+
+.project-image
+  width: 95%
+  padding: 1rem 0
+
+.card-title
+  color: $secondary-clr
+  background-image: url('../../assets/images/technology-background.jpg')
+  border-radius: 15px
+  padding: 0.5rem
+
+.content a
+  text-decoration: none
+
+.gitIcon
+  background-color: $primary-clr
+  width: 3.5rem
+  transition: all 0.35s
+  border-radius: 15px
+
+@media screen and (min-width: 768px)
+  .content
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    position: absolute
+    display: none
+    font-size: 1.5rem
+
+  .card-title:hover
+    font-size: 2rem
+    transition: all 0.35s
+
+  .gitIcon:hover
+    width: 4.25rem
+
+  .image-container:hover + .content
+    display: block
+
+@media screen and (min-width: 768px)
+  .column
+    flex: 50%
+
+@media screen and (min-width: 1200px)
+  .column
+    flex: 33%
+
+@media only screen and (max-width: 768px)
+  .column
+    flex: 100%
+
+  .card
+    display: flex
+    background-image: url('../../assets/images/technology-background.jpg')
+    margin: 1rem
+
+  .content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 25%
+
+  .image-container
+    width: 70%
+
+  .card-title
+    background-image: none
+    color: $text-clr-primary
+
+  &:hover
+    color: $secondary-clr
+
+  .gitIcon
+    width: 2.5rem
+
+  &:hover
+    width: 3rem
