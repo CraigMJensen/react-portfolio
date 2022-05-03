@@ -145,20 +145,36 @@ code {
   transition: all 500ms;
 }
 
-.row {
+.image-container {
+  width: 70%;
+}
+
+.card {
+  border-radius: 15px;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../../assets/images/technology-background.jpg");
 }
 
-.column {
+.project-image {
+  width: 100%;
+  padding: 1rem;
+}
+
+.card-title {
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,136 +182,28 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -webkit-box-flex: 33%;
-      -ms-flex: 33%;
-          flex: 33%;
-}
-
-.project-container {
-  margin-bottom: 2rem;
-}
-
-.card {
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  position: relative;
-  border-radius: 15px;
-}
-
-.card:hover {
-  background-image: url("../../assets/images/technology-background.jpg");
-}
-
-.project-image {
-  width: 95%;
-  padding: 1rem 0;
-}
-
-.card-title {
-  color: goldenrod;
-  background-image: url("../../assets/images/technology-background.jpg");
-  border-radius: 15px;
-  padding: 0.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 27%;
+  margin: .5rem;
 }
 
 .content a {
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .gitIcon {
   background-color: #095e93;
-  width: 3.5rem;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  border-radius: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .content {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    position: absolute;
-    display: none;
-    font-size: 1.5rem;
-  }
-  .card-title:hover {
-    font-size: 2rem;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
-  }
-  .gitIcon:hover {
-    width: 4.25rem;
-  }
-  .image-container:hover + .content {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .column {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .column {
-    -webkit-box-flex: 33%;
-        -ms-flex: 33%;
-            flex: 33%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .column {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-  }
-  .card {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-image: url("../../assets/images/technology-background.jpg");
-    margin: 1rem;
-  }
-  .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 25%;
-  }
-  .image-container {
-    width: 70%;
-  }
-  .card-title {
-    background-image: none;
-    color: #ffffff;
-  }
-  .card-title:hover {
-    color: goldenrod;
-  }
-  .gitIcon {
-    width: 2.5rem;
-  }
-  .gitIcon:hover {
-    width: 3rem;
-  }
+  padding: .5rem;
+  width: 4rem;
+  border-radius: 1em;
+  -webkit-box-shadow: 0.125rem 0.125rem 0.5rem goldenrod;
+          box-shadow: 0.125rem 0.125rem 0.5rem goldenrod;
 }
 
 #contact-form {
@@ -372,6 +280,7 @@ button:hover {
 
 .skills p {
   font-size: 2rem;
+  margin: 0;
 }
 
 .frontEndSkills,
@@ -405,6 +314,10 @@ button:hover {
 
 .resumeDownload > a:hover {
   color: goldenrod;
+}
+
+h3 {
+  margin: 0;
 }
 
 .App-footer {
