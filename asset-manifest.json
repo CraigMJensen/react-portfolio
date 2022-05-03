@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.7d06c55e.css",
-    "main.js": "/react-portfolio/static/js/main.b5eab17d.js",
+    "main.css": "/react-portfolio/static/css/main.7f19a0f4.css",
+    "main.js": "/react-portfolio/static/js/main.d8f7098b.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
     "static/media/technology-background.jpg": "/react-portfolio/static/media/technology-background.154f23d4d3287295592c.jpg",
     "static/media/hawker-homepage.png": "/react-portfolio/static/media/hawker-homepage.ea0ab564b49511e9f774.png",
@@ -16,12 +16,12 @@
     "static/media/github.svg": "/react-portfolio/static/media/github.04be58c17b3d5e9744424d414240dd85.svg",
     "static/media/stackOverflow.svg": "/react-portfolio/static/media/stackOverflow.623087f8cf666c88c751db7ee2b6939d.svg",
     "static/media/linkedIn.svg": "/react-portfolio/static/media/linkedIn.0618cc9075b54a042c69cdf3e1cb1fa4.svg",
-    "main.7d06c55e.css.map": "/react-portfolio/static/css/main.7d06c55e.css.map",
-    "main.b5eab17d.js.map": "/react-portfolio/static/js/main.b5eab17d.js.map",
+    "main.7f19a0f4.css.map": "/react-portfolio/static/css/main.7f19a0f4.css.map",
+    "main.d8f7098b.js.map": "/react-portfolio/static/js/main.d8f7098b.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d06c55e.css",
-    "static/js/main.b5eab17d.js"
+    "static/css/main.7f19a0f4.css",
+    "static/js/main.d8f7098b.js"
   ]
 }
