@@ -11,9 +11,6 @@ code {
 
 .App-header {
   background-image: url("../../assets/images/technology-background.jpg");
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
   height: 100%;
   font-size: calc(10px + 2vmin);
   color: #ffffff;
@@ -43,15 +40,15 @@ code {
 .nav-link {
   text-decoration: none;
   color: #ffffff;
+  background-color: #095e93;
+  padding: .35rem;
   border-radius: 15px 15px 0 0;
 }
 
 .nav-link:hover {
   color: goldenrod;
-  -webkit-transition: all 50ms;
-  transition: all 50ms;
-  background-color: #095e93;
-  padding: .5rem;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
 }
 
 .nav-link:not(:hover) {
@@ -62,7 +59,7 @@ code {
 .active {
   color: goldenrod;
   background-color: #095e93;
-  padding: .5rem;
+  padding: 1rem .5rem;
 }
 
 .list-links {
@@ -474,25 +471,26 @@ button:not(:hover) {
 }
 
 .resumeDownload {
-  font-size: 1.75rem;
   margin: 0;
-  padding: 2rem 0 .5rem 0;
   color: #ffffff;
   text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 
 .resumeDownload a {
   text-decoration: none;
+}
+
+.resumeDownload .resume {
   color: #ffffff;
 }
 
-.resumeDownload a:hover {
+.resumeDownload .resume:hover {
   color: goldenrod;
   -webkit-transition: all 350ms;
   transition: all 350ms;
 }
 
-.resumeDownload a:not(:hover) {
+.resumeDownload .resume:not(:hover) {
   -webkit-transition: all 350ms;
   transition: all 350ms;
 }

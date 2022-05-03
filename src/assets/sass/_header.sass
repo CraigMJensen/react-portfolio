@@ -1,6 +1,5 @@
 .App-header
   background-image: url('../../assets/images/technology-background.jpg')
-  flex: none
   height: 100%
   font-size: calc(10px + 2vmin)
   color: $text-clr-primary
@@ -20,19 +19,19 @@
 .nav-link
   text-decoration: none
   color: $text-clr-primary
+  background-color: $primary-clr
+  padding: .35rem
   border-radius: 15px 15px 0 0
   &:hover
     color: $secondary-clr
-    transition: all 50ms
-    background-color: $primary-clr
-    padding: .5rem
+    transition: all 150ms
   &:not(:hover)
     transition: all 150ms
 
 .active
   color: $secondary-clr
   background-color: $primary-clr
-  padding: .5rem
+  padding: 1rem .5rem
 
 .list-links
   width: 100%
