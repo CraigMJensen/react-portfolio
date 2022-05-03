@@ -3,7 +3,10 @@
   color: $text-clr-primary
   p
     font-size: 2rem
-    margin: 0
+  @media (min-width: $bp-med)
+    width: 100%
+    display: flex
+    justify-content: space-evenly
 
 .frontEndSkills,
 .backEndSkills
@@ -19,17 +22,15 @@
   font-size: 1.5rem
 
 .resumeDownload
-  font-size: 1.75rem
   margin: 0
-  padding: 2rem 0 .5rem 0
   color: $text-clr-primary
   text-shadow: .25rem .25rem .5rem $dark-primary-clr
-
-.resumeDownload > a
-  text-decoration: none
-  color: $text-clr-primary
-  &:hover
-    color: $secondary-clr
-
-h3
-  margin: 0
+  a
+    text-decoration: none
+  .resume
+    color: $text-clr-primary
+    &:hover
+      color: $secondary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms

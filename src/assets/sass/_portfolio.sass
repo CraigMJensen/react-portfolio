@@ -1,37 +1,93 @@
+.row
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  width: 100%
 
-.image-container
-  width: 70%
+.column
+  display: flex
+  flex-direction: column
+  @media (min-width: $bp-med)
+    flex: 50%
+  @media (min-width: $bp-large)
+    flex: 33%
 
 .card
   border-radius: 15px
-  margin: 1rem
   display: flex
   justify-content: center
   align-items: center
+  flex-direction: column
+  margin: 1rem
   background-image: url('../../assets/images/technology-background.jpg')
+  box-shadow: 5px 5px 8px $dark-primary-clr
+  @media (min-width: 768px)
+    background-image: none
+    box-shadow: none
+    &:hover
+      background-color: $dark-primary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms
 
 .project-image
   width: 100%
-  padding: 1rem
+  padding: 1rem 0 0 0
+  box-shadow: 5px 5px 8px $dark-primary-clr
+  @media (min-width: 768px)
+    padding: 0
 
 .card-title
   color: $text-clr-primary
-  padding: 0.5rem
+  background-image: none
+  border-radius: 15px
+  padding: .5rem
+  @media (min-width: 768px)
+    background-image: url('../../assets/images/technology-background.jpg')
+    &:hover
+      color: $secondary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms
 
 .content
   display: flex
-  flex-direction: column
+  flex-direction: row
   justify-content: center
   align-items: center
-  width: 27%
-  margin: .5rem
+  width: 100%
   a
     text-decoration: none
+  @media (min-width: 768px)
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    position: absolute
+    display: flex
+    flex-direction: column
+    opacity: 0
     font-size: 1.5rem
+    width: 100%
+    &:hover
+      opacity: 1
+
+.image-container
+  width: 70%
+  @media (min-width: 768px)
+    width: 100%
 
 .gitIcon
   background-color: $primary-clr
   padding: .5rem
-  width: 4rem
-  border-radius: 1em
-  box-shadow: .125rem .125rem .5rem $secondary-clr
+  width: 3rem
+  transition: all 0.35s
+  border-radius: 15px
+  box-shadow: 2px 2px 5px $secondary-clr, -2px -2px 5px $secondary-clr, -2px 2px 5px $secondary-clr, 2px -2px 5px $secondary-clr
+  @media (min-width: 768px)
+    box-shadow: none
+    &:hover
+      width: 4.25rem
+      box-shadow: 2px 2px 5px $secondary-clr, -2px -2px 5px $secondary-clr, -2px 2px 5px $secondary-clr, 2px -2px 5px $secondary-clr
+      transition: all 350ms
+    &:not(:hover)
+      transition: all 350ms

@@ -9,6 +9,8 @@
   background-image: url('../../assets/images/technology-background.jpg')
   border-radius: 15px
   box-shadow: .25rem .25rem .5rem $dark-primary-clr
+  @media (min-width: $bp-med)
+    width: 50%
 
 label
   color: $text-clr-primary
@@ -38,6 +40,12 @@ button
   width: 100%
   &:hover
     color: $secondary-clr
+    transition: all 350ms
+  &:not(:hover)
+    transition: all 350ms
+
+  @media (min-width: $bp-med)
+    width: 50%
 
 .error-text
   color: $secondary-clr

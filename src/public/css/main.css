@@ -11,9 +11,6 @@ code {
 
 .App-header {
   background-image: url("../../assets/images/technology-background.jpg");
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
   height: 100%;
   font-size: calc(10px + 2vmin);
   color: #ffffff;
@@ -43,6 +40,8 @@ code {
 .nav-link {
   text-decoration: none;
   color: #ffffff;
+  background-color: #095e93;
+  padding: .35rem;
   border-radius: 15px 15px 0 0;
 }
 
@@ -60,7 +59,7 @@ code {
 .active {
   color: goldenrod;
   background-color: #095e93;
-  padding: .5rem;
+  padding: 1rem .5rem;
 }
 
 .list-links {
@@ -114,8 +113,13 @@ code {
 .about-image {
   width: 80%;
   border-radius: 40px;
-  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
-          box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+  -webkit-box-shadow: 2px 2px 5px #050a27, -2px -2px 5px #050a27, -2px 2px 5px #050a27, 2px -2px 5px #050a27;
+          box-shadow: 2px 2px 5px #050a27, -2px -2px 5px #050a27, -2px 2px 5px #050a27, 2px -2px 5px #050a27;
+}
+
+.about-image:hover {
+  -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+          box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
 }
 
 @media (min-width: 768px) {
@@ -145,36 +149,20 @@ code {
   transition: all 500ms;
 }
 
-.image-container {
-  width: 70%;
-}
-
-.card {
-  border-radius: 15px;
-  margin: 1rem;
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: url("../../assets/images/technology-background.jpg");
-}
-
-.project-image {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
-  padding: 1rem;
 }
 
-.card-title {
-  color: #ffffff;
-  padding: 0.5rem;
-}
-
-.content {
+.column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,28 +170,178 @@ code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .column {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .column {
+    -webkit-box-flex: 33%;
+        -ms-flex: 33%;
+            flex: 33%;
+  }
+}
+
+.card {
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 27%;
-  margin: .5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+  background-image: url("../../assets/images/technology-background.jpg");
+  -webkit-box-shadow: 5px 5px 8px #050a27;
+          box-shadow: 5px 5px 8px #050a27;
+}
+
+@media (min-width: 768px) {
+  .card {
+    background-image: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .card:hover {
+    background-color: #050a27;
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+  .card:not(:hover) {
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+}
+
+.project-image {
+  width: 100%;
+  padding: 1rem 0 0 0;
+  -webkit-box-shadow: 5px 5px 8px #050a27;
+          box-shadow: 5px 5px 8px #050a27;
+}
+
+@media (min-width: 768px) {
+  .project-image {
+    padding: 0;
+  }
+}
+
+.card-title {
+  color: #ffffff;
+  background-image: none;
+  border-radius: 15px;
+  padding: .5rem;
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    background-image: url("../../assets/images/technology-background.jpg");
+  }
+  .card-title:hover {
+    color: goldenrod;
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+  .card-title:not(:hover) {
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .content a {
   text-decoration: none;
-  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 0;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .content:hover {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  width: 70%;
+}
+
+@media (min-width: 768px) {
+  .image-container {
+    width: 100%;
+  }
 }
 
 .gitIcon {
   background-color: #095e93;
   padding: .5rem;
-  width: 4rem;
-  border-radius: 1em;
-  -webkit-box-shadow: 0.125rem 0.125rem 0.5rem goldenrod;
-          box-shadow: 0.125rem 0.125rem 0.5rem goldenrod;
+  width: 3rem;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+          box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+}
+
+@media (min-width: 768px) {
+  .gitIcon {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .gitIcon:hover {
+    width: 4.25rem;
+    -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+            box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
+  .gitIcon:not(:hover) {
+    -webkit-transition: all 350ms;
+    transition: all 350ms;
+  }
 }
 
 #contact-form {
@@ -227,6 +365,12 @@ code {
   border-radius: 15px;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
           box-shadow: 0.25rem 0.25rem 0.5rem #050a27;
+}
+
+@media (min-width: 768px) {
+  #contact-form {
+    width: 50%;
+  }
 }
 
 label {
@@ -263,6 +407,19 @@ button {
 
 button:hover {
   color: goldenrod;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+button:not(:hover) {
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+@media (min-width: 768px) {
+  button {
+    width: 50%;
+  }
 }
 
 .error-text {
@@ -280,7 +437,18 @@ button:hover {
 
 .skills p {
   font-size: 2rem;
-  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .skills {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .frontEndSkills,
@@ -300,24 +468,28 @@ button:hover {
 }
 
 .resumeDownload {
-  font-size: 1.75rem;
   margin: 0;
-  padding: 2rem 0 .5rem 0;
   color: #ffffff;
   text-shadow: 0.25rem 0.25rem 0.5rem #050a27;
 }
 
-.resumeDownload > a {
+.resumeDownload a {
   text-decoration: none;
+}
+
+.resumeDownload .resume {
   color: #ffffff;
 }
 
-.resumeDownload > a:hover {
+.resumeDownload .resume:hover {
   color: goldenrod;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
 }
 
-h3 {
-  margin: 0;
+.resumeDownload .resume:not(:hover) {
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
 }
 
 .App-footer {
@@ -327,9 +499,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -338,12 +510,13 @@ h3 {
 
 .icons {
   background-color: #095e93;
-  margin: 0 2rem;
   padding: 1.125rem;
 }
 
 .icons:hover {
   background-color: goldenrod;
+  -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+          box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
   -webkit-transition: all 500ms;
   transition: all 500ms;
 }

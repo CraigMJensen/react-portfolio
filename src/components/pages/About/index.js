@@ -6,7 +6,17 @@ function About() {
     <div className="about-page wrapper">
       <h2 className="title">About</h2>
       <div className="image-container-about">
+<<<<<<< HEAD
         <img className="about-image" src={image} alt="Craig" />
+=======
+        <a
+          href="https://github.com/CraigMJensen"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img className="about-image" src={image} alt="Craig" />
+        </a>
+>>>>>>> 69c4fb82817a698346eab3320d5b16e671dabf0b
       </div>
 
       <p className="aboutMe">
