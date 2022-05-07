@@ -113,6 +113,8 @@ code {
 .about-image {
   width: 80%;
   border-radius: 40px;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
   -webkit-box-shadow: 2px 2px 5px #050a27, -2px -2px 5px #050a27, -2px 2px 5px #050a27, 2px -2px 5px #050a27;
           box-shadow: 2px 2px 5px #050a27, -2px -2px 5px #050a27, -2px 2px 5px #050a27, 2px -2px 5px #050a27;
 }
@@ -120,6 +122,11 @@ code {
 .about-image:hover {
   -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
           box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
+}
+
+.about-image:not(:hover) {
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
 }
 
 @media (min-width: 768px) {

@@ -24,10 +24,12 @@
 .about-image
   width: 80%
   border-radius: 40px
+  transition: all 350ms
   box-shadow: 2px 2px 5px $dark-primary-clr, -2px -2px 5px $dark-primary-clr, -2px 2px 5px $dark-primary-clr, 2px -2px 5px $dark-primary-clr
   &:hover
     box-shadow: 2px 2px 5px $secondary-clr, -2px -2px 5px $secondary-clr, -2px 2px 5px $secondary-clr, 2px -2px 5px $secondary-clr
-
+  &:not(:hover)
+    transition: all 350ms
   @media (min-width: $bp-med)
     width: 40%
 
