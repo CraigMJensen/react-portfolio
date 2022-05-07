@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { projectData } from './projects';
 import githubSvg from '../../assets/images/github.svg';
 
 function Project() {
+  // const [githubData, setGithubData] = useState();
+
+  // const getGithubData = () => {
+  //   return fetch(`https://api.github.com/users/craigmjensen/starred`)
+  //     .then((response) => response.json())
+  //     .then((data) => setGithubData(data));
+  // };
+
+  // useEffect(() => {
+  //   getGithubData();
+  // }, []);
+
+  // console.log(githubData);
+
   return (
     <div className="row">
       {projectData.map((data, i) => (
