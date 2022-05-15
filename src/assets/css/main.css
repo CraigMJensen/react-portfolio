@@ -14,6 +14,7 @@ code {
   height: 100%;
   font-size: calc(10px + 2vmin);
   color: #ffffff;
+  border-bottom: 1px solid goldenrod;
 }
 
 .h1 {
@@ -59,7 +60,9 @@ code {
 .active {
   color: goldenrod;
   background-color: #095e93;
-  padding: 1rem .5rem;
+  padding: 1rem .5rem .6rem .5rem;
+  border: 1px solid goldenrod;
+  border-bottom: none;
 }
 
 .list-links {
@@ -514,6 +517,7 @@ button:not(:hover) {
       -ms-flex-align: center;
           align-items: center;
   bottom: 0;
+  border-top: 1px solid goldenrod;
 }
 
 .icons {
@@ -523,15 +527,16 @@ button:not(:hover) {
 
 .icons:hover {
   background-color: goldenrod;
+  border-top: none;
   -webkit-box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
           box-shadow: 2px 2px 5px goldenrod, -2px -2px 5px goldenrod, -2px 2px 5px goldenrod, 2px -2px 5px goldenrod;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
 }
 
 .icons:not(:hover) {
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
 }
 
 html,

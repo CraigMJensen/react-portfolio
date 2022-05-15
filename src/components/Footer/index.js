@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="App-footer">
       <a
-        href="https://github.com/CraigMJensen?tab=repositories"
+        href="https://github.com/CraigMJensen"
         target="_blank"
         rel="noopener noreferrer"
       >
